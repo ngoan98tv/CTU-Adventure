@@ -8,13 +8,22 @@
     <string name="osrm_server_url">http://34.87.84.153/route/v1/foot/</string>
     <string-array name="buildings_array">
         <item>Select a destination...</item>
-        <item>College of ICT</item>
+        <item>College of Information &amp; Communication Technology</item>
         <item>College of Economics</item>
         <item>School of Law</item>
-        <item>College of Agriculture</item>
+        <item>College of Agriculture &amp; Applied Biology</item>
         <item>College of Aquaculture &amp; Fisheries</item>
         <item>College of Engineering Technology</item>
         <item>College of Environment &amp; Natural Resources</item>
         <item>College of Natural Sciences</item>
+        <item>Administration Building</item>
+        <item>Learning Resource Center</item>
+        <item>School of Political Science</item>
+        <item>School of Social Sciences &amp; Humanities</item>
+        <item>School of Education</item>
+        <item>Department of Physical Education</item>
+        <item>School of Pre-University</item>
+        <item>Dormitory A</item>
+        <item>Dormitory B</item>
     </string-array>
 </resources>
