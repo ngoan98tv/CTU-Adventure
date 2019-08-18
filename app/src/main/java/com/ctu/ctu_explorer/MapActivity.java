@@ -2,6 +2,7 @@ package com.ctu.ctu_explorer;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.StrictMode;
@@ -18,6 +19,7 @@ import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.company.cube.UnityPlayerActivity;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -129,6 +131,15 @@ public class MapActivity extends AppCompatActivity implements OnItemSelectedList
             @Override
             public void onClick(View v) {
                 getCurrentLocation();
+            }
+        });
+
+        ImageButton cameraBtn = findViewById(R.id.capture_btn);
+        cameraBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MapActivity.this, UnityPlayerActivity.class);
+                startActivity(intent);
             }
         });
     }
@@ -244,6 +255,7 @@ public class MapActivity extends AppCompatActivity implements OnItemSelectedList
 
             RoadManager roadManager = new OSRMRoadManager(this);
             ((OSRMRoadManager) roadManager).setService(getResources().getString(R.string.osrm_server_url));
+            roadManager.addRequestOption("continue_straight=true");
 
             Road road = null;
             try {
