@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">CTU Explorer</string>
-    <string name="bottom_nav_map_view">Map View</string>
-    <string name="bottom_nav_building_info">Building Info</string>
+    <string name="app_name" translatable="false">CTU Explorer</string>
+    <string name="bottom_nav_map_view" translatable="false">Map View</string>
+    <string name="bottom_nav_building_info" translatable="false">Building Info</string>
     <string name="message_default_text">Wel!</string>
-    <string name="capture_btn_desc">Capture</string>
+    <string name="capture_btn_desc" translatable="false">Capture</string>
     <string name="my_location_btn_desc">My Location</string>
     <string name="osrm_server_url">http://34.87.84.153/route/v1/foot/</string>
     <string-array name="buildings_array">
@@ -18,7 +18,17 @@
         <item>College of Natural Sciences</item>
     </string-array>
     <string-array name="languages">
-        <item>English</item>
-        <item>Vietnamese</item>
+        <item>Chọn ngôn ngữ</item>
+        <item>Anh</item>
+        <item>Tiếng Việt</item>
     </string-array>
+    <string name="first_draweritem">trong khoảng</string>
+    <string name="second_draweritem">Hướng dẫn</string>
+    <string name="third_draweritem">Thông tin công trình</string>
+    <string name="fourth_draweritem">Báo cáo vấn đề</string>
+    <string name="third_subitem1">CICT</string>
+    <string name="third_subitem2">LAW</string>
+    <string name="language">Ngôn ngữ:</string>
+    <string name="Permissiondenied">Không thể tải bản đồ mà không có tất cả các quyền được cấp</string>
+    <string name="Permission_GPS">Vui lòng bật GPS để có được vị trí của bạn</string>
 </resources>

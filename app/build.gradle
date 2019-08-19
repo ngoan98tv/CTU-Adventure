@@ -32,7 +32,7 @@ dependencies {
     implementation 'com.github.MKergall:osmbonuspack:6.6.0'
     implementation 'com.google.android.gms:play-services-location:17.0.0'
     implementation "com.mikepenz:materialdrawer:6.1.1"
-    implementation project(':CTU-Explorer-AR-mode')
+    //implementation project(':CTU-Explorer-AR-mode')
 }
 
 apply plugin: 'com.google.gms.google-services'
