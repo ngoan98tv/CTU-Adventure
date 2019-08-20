@@ -388,6 +388,7 @@ public class UnityPlayerActivity extends Activity
                 cText.setText(cSplit[cictIdx]);
                 cBackButton.setVisibility(View.INVISIBLE);
                 cButtons.setVisibility(View.VISIBLE);
+                finish();
             }
         });
 
