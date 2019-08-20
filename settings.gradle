@@ -1,1 +1,1 @@
-include ':app', ':CTU-Explorer-AR-mode'
+include ':app', ':CTU-Explorer-AR-mode', ':image-labeling'

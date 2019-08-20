@@ -21,7 +21,8 @@ import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-//import com.company.cube.UnityPlayerActivity;
+import com.company.cube.UnityPlayerActivity;
+import com.example.labeling.ImageLabeling;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -145,8 +146,7 @@ public class MapActivity extends AppCompatActivity implements OnItemSelectedList
         cameraBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent intent = new Intent(MapActivity.this, UnityPlayerActivity.class);
-                //startActivity(intent);
+                startActivityForResult(new Intent(MapActivity.this, ImageLabeling.class), 1);
             }
         });
 
@@ -173,6 +173,15 @@ public class MapActivity extends AppCompatActivity implements OnItemSelectedList
             public void onNothingSelected(AdapterView<?> adapterView) {
             }
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == 1) {
+            if (resultCode == RESULT_OK) {
+                //TODO: data.getStringExtra("result");
+            }
+        }
     }
 
     //this is for language change
