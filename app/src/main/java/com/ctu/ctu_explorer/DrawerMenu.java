@@ -15,15 +15,15 @@ public class DrawerMenu {
         DrawerBuilder drawerBuilder = new DrawerBuilder();
         drawerBuilder.withActivity(activity);
         drawerBuilder.addDrawerItems(
-                new PrimaryDrawerItem().withName("About").withIcon(R.drawable.ic_info_black_24dp),
-                new PrimaryDrawerItem().withName("Instructions").withIcon(R.drawable.ic_assignment_black_24dp),
-                new PrimaryDrawerItem().withName("Buildings Information").withIcon(R.drawable.ic_business_black_24dp)
+                new PrimaryDrawerItem().withName(R.string.first_draweritem).withIcon(R.drawable.ic_info_black_24dp),
+                new PrimaryDrawerItem().withName(R.string.second_draweritem).withIcon(R.drawable.ic_assignment_black_24dp),
+                new PrimaryDrawerItem().withName(R.string.third_draweritem).withIcon(R.drawable.ic_business_black_24dp)
                         .withSubItems(
-                                new SecondaryDrawerItem().withName("CICT"),
-                                new SecondaryDrawerItem().withName("LAW")
+                                new SecondaryDrawerItem().withName(R.string.third_subitem1),
+                                new SecondaryDrawerItem().withName(R.string.third_subitem2)
                         ),
                 new DividerDrawerItem(),
-                new PrimaryDrawerItem().withName("Report Problem").withIcon(R.drawable.ic_report_problem_black_24dp)
+                new PrimaryDrawerItem().withName(R.string.fourth_draweritem).withIcon(R.drawable.ic_report_problem_black_24dp)
         );
         drawerBuilder.withSelectedItem(-1);
         drawerBuilder.withHeader(R.layout.drawer_header);

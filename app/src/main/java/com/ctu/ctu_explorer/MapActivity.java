@@ -4,6 +4,7 @@ import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.res.Resources;
 import android.location.Location;
 import android.os.StrictMode;
 import android.preference.PreferenceManager;
@@ -11,6 +12,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
@@ -19,7 +21,7 @@ import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.company.cube.UnityPlayerActivity;
+//import com.company.cube.UnityPlayerActivity;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -37,6 +39,8 @@ import org.osmdroid.views.overlay.Marker;
 import org.osmdroid.views.overlay.Polyline;
 
 import java.util.ArrayList;
+import java.util.Locale;
+import java.util.Map;
 
 public class MapActivity extends AppCompatActivity implements OnItemSelectedListener {
     private static final int MULTIPLE_PERMISSION_REQUEST_CODE = 4;
@@ -47,6 +51,9 @@ public class MapActivity extends AppCompatActivity implements OnItemSelectedList
     private Marker destinationMarker;
     private Polyline routingOverlay;
     private FusedLocationProviderClient fusedLocationClient;
+    Spinner spinner;
+    Locale myLocale;
+    String currentLanguage = "en", currentLang;
 
     final MapEventsReceiver mReceive = new MapEventsReceiver(){
         @Override
@@ -138,10 +145,52 @@ public class MapActivity extends AppCompatActivity implements OnItemSelectedList
         cameraBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MapActivity.this, UnityPlayerActivity.class);
-                startActivity(intent);
+                //Intent intent = new Intent(MapActivity.this, UnityPlayerActivity.class);
+                //startActivity(intent);
             }
         });
+
+        //this is for languge change
+        currentLanguage = getIntent().getStringExtra(currentLang);
+
+        spinner = (Spinner) findViewById(R.id.lang_selection);
+
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
+                switch (position) {
+                    case 0:
+                        break;
+                    case 1:
+                        setLocale("en");
+                        break;
+                    case 2:
+                        setLocale("vi");
+                        break;
+                }
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+            }
+        });
+    }
+
+    //this is for language change
+    public void setLocale(String localeName) {
+        if (!localeName.equals(currentLanguage)) {
+            myLocale = new Locale(localeName);
+            Resources res = getResources();
+            DisplayMetrics dm = res.getDisplayMetrics();
+            android.content.res.Configuration conf = res.getConfiguration();
+            conf.locale = myLocale;
+            res.updateConfiguration(conf, dm);
+            Intent refresh = new Intent(this, MapActivity.class);
+            refresh.putExtra(currentLang, localeName);
+            finish();
+            startActivity(refresh);
+        } else {
+            Toast.makeText(MapActivity.this, "Language already selected!", Toast.LENGTH_SHORT).show();
+        }
     }
 
     private void checkPermissionsStateAndSetupMap() {
@@ -196,12 +245,12 @@ public class MapActivity extends AppCompatActivity implements OnItemSelectedList
                     }
                 }
                 if (somePermissionWasDenied) {
-                    Toast.makeText(this, "Cant load maps without all the permissions granted", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, R.string.Permissiondenied, Toast.LENGTH_SHORT).show();
                 } else {
                     setupMap();
                 }
             } else {
-                Toast.makeText(this, "Cant load maps without all the permissions granted", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.Permissiondenied, Toast.LENGTH_SHORT).show();
             }
             return;
         }
@@ -242,7 +291,7 @@ public class MapActivity extends AppCompatActivity implements OnItemSelectedList
                 });
 
         if (currentLocation == null) {
-            Toast.makeText(this, "Please enable GPS to get your location", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, R.string.Permission_GPS, Toast.LENGTH_LONG).show();
         }
     }
 
