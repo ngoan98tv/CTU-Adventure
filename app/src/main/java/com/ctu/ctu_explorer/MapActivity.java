@@ -20,6 +20,7 @@ import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.company.animation.UnityPlayerActivity;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -179,10 +180,9 @@ public class MapActivity extends AppCompatActivity implements OnItemSelectedList
                     Toast.makeText(this, "Cannot detect this time, please try again", Toast.LENGTH_LONG).show();
                 } else {
                     Toast.makeText(this, result, Toast.LENGTH_LONG).show();
-//                    TODO: Trigger AR Module
-//                    Intent arIntend = new Intent(MapActivity.this, UnityPlayerActivity.class);
-//                    arIntend.putExtra("code", result);
-//                    startActivity(arIntend);
+                    Intent arIntend = new Intent(MapActivity.this, UnityPlayerActivity.class);
+                    arIntend.putExtra("code", result);
+                    startActivity(arIntend);
                 }
 
             }

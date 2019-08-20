@@ -37,6 +37,7 @@ dependencies {
     implementation "com.mikepenz:materialdrawer:6.1.1"
     implementation 'com.google.firebase:firebase-ml-vision:23.0.0'
     implementation 'com.google.firebase:firebase-ml-vision-automl:18.0.1'
+    implementation project(':ARmode')
 }
 
 apply plugin: 'com.google.gms.google-services'

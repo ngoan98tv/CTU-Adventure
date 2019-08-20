@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="main$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/home/tvngoan/Development/CTU-Explorer/ARmode/src/main/res"/><source path="/home/tvngoan/Development/CTU-Explorer/ARmode/build/generated/res/rs/debug"/><source path="/home/tvngoan/Development/CTU-Explorer/ARmode/build/generated/res/resValues/debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="main" generated-set="main$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/home/tvngoan/Development/CTU-Explorer/ARmode/src/main/res"><file name="ic_launcher_background" path="/home/tvngoan/Development/CTU-Explorer/ARmode/src/main/res/mipmap-mdpi/ic_launcher_background.png" qualifiers="mdpi-v4" type="mipmap"/><file name="ic_launcher_foreground" path="/home/tvngoan/Development/CTU-Explorer/ARmode/src/main/res/mipmap-mdpi/ic_launcher_foreground.png" qualifiers="mdpi-v4" type="mipmap"/><file name="app_icon" path="/home/tvngoan/Development/CTU-Explorer/ARmode/src/main/res/mipmap-mdpi/app_icon.png" qualifiers="mdpi-v4" type="mipmap"/><file name="layout_main" path="/home/tvngoan/Development/CTU-Explorer/ARmode/src/main/res/layout/layout_main.xml" qualifiers="" type="layout"/><file path="/home/tvngoan/Development/CTU-Explorer/ARmode/src/main/res/values/styles.xml" qualifiers=""><style name="UnityThemeSelector" parent="BaseUnityTheme">
+	<item name="android:windowBackground">@android:color/black</item>
+</style><style name="BaseUnityTheme" parent="android:Theme.Holo.Light.NoActionBar.Fullscreen">
+</style><style name="UnityThemeSelector.Translucent" parent="@style/UnityThemeSelector">
+    <item name="android:windowIsTranslucent">true</item>
+    <item name="android:windowBackground">@android:color/transparent</item>
+</style></file><file path="/home/tvngoan/Development/CTU-Explorer/ARmode/src/main/res/values/color.xml" qualifiers=""><color name="colorPrimary">#0b4178</color><color name="colorPrimaryDark">#082c51</color><color name="colorAccent">#2172cd</color></file><file path="/home/tvngoan/Development/CTU-Explorer/ARmode/src/main/res/values/strings.xml" qualifiers=""><string name="app_name">CTUexplorer</string><string name="game_view_content_description">Game view</string><string name="CICT1">
+    Chào mừng bạn đến với Khoa Công nghệ Thông tin và Truyền thông!;
+    Để biết thêm thông tin, nhấp vào nút bên dưới.\n\n
+  </string><string name="CICT_info">
+    Khoa Công nghệ thông tin và truyền thông được thành lập vào năm 1994.;
+    Có tổng số 94 giảng viên, bao gồm 24 tiến sĩ và 51 thạc sĩ.;
+    Hơn 3400 sinh viên học tập và nghiên cứu.\n\n
+  </string><string name="CICT_vision">
+    Tầm nhìn đến năm 2020.;
+    Trở thành một tổ chức nghiên cứu và giáo dục Công nghệ thông tin nổi tiếng tại Việt Nam,;
+    đóng vai trò cốt lõi trong nghiên cứu, giáo dục, chuyển giao công nghệ ở đồng bằng sông Cửu Long và khu vực phía Nam.;
+    đạt tiêu chuẩn đào tạo từ các trường đại học tiên tiến trên thế giới.;
+    Nhiệm vụ của Khoa Công nghệ thông tin và truyền thông là cung cấp các chương trình đại học và sau đại học,;
+    nghiên cứu khoa học và chuyển giao công nghệ trong lĩnh vực Công nghệ thông tin và truyền thông.\n\n
+  </string><string name="CICT_course">
+    Khoa Công nghệ thông tin và truyền thông có 5 chương trình đại học.;
+    Gồm Hệ thống thông tin, Mạng máy tính và Truyền thông, Kỹ thuật phần mềm,;
+    Khoa học máy tính và Công nghệ thông tin.;
+    Có chương trình song ngữ đặc biệt sử dụng cho tất cả các môn học trên bằng tiếng Pháp.;
+    Đồng thời cung cấp 3 chương trình sau đại học.;
+    Gồm Hệ thống thông tin, Khoa học máy tính bằng Thạc sĩ và Hệ thống thông tin bằng Tiến sĩ.\n\n
+  </string><string name="CE1">
+    Chào mừng bạn đến với khoa kinh tế!;
+    Để biết thêm thông tin, nhấp vào nút bên dưới.\n\n
+
+  </string><string name="CE_info">
+    Khoa Kinh tế được thành lập vào năm 1979.;
+    Có tổng số 101 giảng viên, bao gồm 10 tiến sĩ và hơn 65 thạc sĩ.;
+    Có hơn 1000 sinh viên học tập tại đây.\n\n
+  </string><string name="CE_vision">
+    Trở thành một trong những khoa hàng đầu của CTU và của Việt Nam,;
+    trở thành một trường đại học với chương trình giảng dạy chuyên sâu;
+    nghiên cứu khoa học về chất lượng ở khu vực đồng bằng sông Cửu Long.\n\n
+  </string><string name="CE_course">
+    Khoa Kinh tế có thể được chia thành 9 bộ môn,;
+    bao gồm Quản trị kinh doanh, Kinh tế, Marketing, v.v.;
+    Khu vực nghiên cứu của nó được chia thành 4 phần, ;
+    Ephát triển doanh nghiệp, nghiên cứu thị trường trong và ngoài nước,;
+    quản lý và đánh giá dự án,;
+    và quy hoạch nông nghiệp và phát triển nông thôn.\n\n
+  </string><string name="CL1">
+    Chào mừng bạn đến Khoa Luật!;
+    Để biết thêm thông tin, nhấp vào nút bên dưới.\n\n
+  </string><string name="CL_info">
+    Thành lập năm 2000.;
+    Khoa Luật tiếp nhận hơn 300 sinh viên trong trường,;
+    khoảng 900 sinh viên học tại các trường Cao đẳng Cộng đồng;
+    ở các tỉnh đồng bằng sông Cửu Long và khoảng 40 sinh viên tốt nghiệp.\n\n
+  </string><string name="CL_mission">
+    Mỗi khoa trong trường luật có một nhiệm vụ khác nhau.;
+    Khoa Luật hành chính nhằm đào tạo sinh viên;
+    kiến thức về quản lý nhà nước và năng lực để nhanh chóng thích ứng với những thay đổi xã hội.;
+    Nhiệm vụ của Bộ Tư pháp là đào tạo sinh viên;
+    Luật thương mại và luật quốc tế đáp ứng nhu cầu ngày càng tăng;
+    của xã hội trong quá trình hội nhập kinh tế quốc tế.;
+    Cuối cùng, bộ phận của Luật thương mại nhằm cung cấp;
+    chương trình Luật chuyên nghiệp về luật hình sự và dân sự,;
+    và đáp ứng yêu cầu của nhà tuyển dụng trong các lĩnh vực liên quan.\n\n
+  </string><string name="CL_course">
+    Có 3 bộ môn và 1 trung tâm trong khoa Luật.;
+    Khoa Luật cung cấp 3 chương trình cử nhân là luật hành chính, ;
+    luật tư pháp và luật thương mại.;
+    Ngoài ra, có một chương trình Thạc sĩ cho luật kinh tế.;
+    Có Chương trình giáo dục pháp lý lâm sàng,;
+    lấy từ trung tâm luật so sánh.\n\n
+  </string><string name="cBackButton">Chọn tùy chọn khác</string><string name="eBackButton">Chọn tùy chọn khác</string><string name="IBackButton">Chọn tùy chọn khác</string><string name="Info">Thông tin</string><string name="Vision">Tầm nhìn</string><string name="Course">Khóa học</string><string name="Mission">Sứ mệnh</string></file><file name="app_icon" path="/home/tvngoan/Development/CTU-Explorer/ARmode/src/main/res/mipmap-anydpi-v26/app_icon.xml" qualifiers="anydpi-v26" type="mipmap"/><file name="app_icon_round" path="/home/tvngoan/Development/CTU-Explorer/ARmode/src/main/res/mipmap-anydpi-v26/app_icon_round.xml" qualifiers="anydpi-v26" type="mipmap"/><file path="/home/tvngoan/Development/CTU-Explorer/ARmode/src/main/res/values-v21/styles.xml" qualifiers="v21"><style name="BaseUnityTheme" parent="android:Theme.Material.Light.NoActionBar.Fullscreen">
+</style></file><file path="/home/tvngoan/Development/CTU-Explorer/ARmode/src/main/res/values-en/strings.xml" qualifiers="en"><string name="app_name">CTUexplorer</string><string name="game_view_content_description">Game view</string><string name="CICT1">
+    Hi!　Welcome to the College of I.C.T!;
+    Students majoring in I.C.T use this building.;
+    What do you want to know about this building?\n\n
+  </string><string name="CICT_info">
+    The College of I.C.T was established in 1994.;
+    There are 94 academic staffs,\nincluding 24 Ph.Ds and 51 masters.;
+    About 3400 students are studying in this building.\n\n
+  </string><string name="CICT_vision">
+    There are three main vision of C.I.C.T towards 2020.;
+    Becoming a well-known ICT research and education institution in Vietnam,;
+    playing a core role in ICT research, education in the Mekong Delta and the Southern Region,;
+    Also reaching the training standards from the advanced universities in the world.;
+    C.I.C.T\'s mission is to offer various programs,;
+    research and technology transfer in the field of I.C.T.\n\n
+  </string><string name="CICT_course">
+    C.I.C.T offers 5 undergraduate programs.;
+    There are Information Systems, Computer Networks and Communications,;
+    Software Engineering, Computer Science, and Information Technology.;
+    There is special bilingual program using all of the disciplines in French.;
+    C.I.C.T also offers 3 postgraduate programs.;
+    There are Information Systems and Computer Science program for master degree.;
+    There is Information Systems program for Ph.D, too.\n\n
+  </string><string name="CE1">
+    Hi! Welcome to the College of Economics!;
+    Students majoring in economics use this building.;
+    What do you want to know about this college?\n\n;
+  </string><string name="CE_info">
+    The College of Economics was established in 1979.;
+    There are 101 academic staffs, including 10 Ph.Ds and more than 65 masters.;
+    More than 1000 students have studied in this building.\n\n
+  </string><string name="CE_vision">
+    There are two main visions of College of Economics.;
+    Becoming one of the top colleges of CTU and of Vietnam,;
+    Becoming a college with intensive curriculum,;
+    scientific research in quality in the Mekong Delta region.\n\n;
+  </string><string name="CE_course">
+    The College of Economics can be divided into 9 major,;
+    Business administration, Economics, Marketing, and more.;
+    Its research area is divided into 4 parts,;
+    Enterprise development, research of domestic and foreign markets,;
+    project management and evaluation,;
+    and agricultural planning and rural development.\n\n
+  </string><string name="CL1">
+    Hi! Welcome to the School of Law!;
+    Students majoring in law use this building.;
+    For more information, click the button below.\n\n
+  </string><string name="CL_info">
+    The School of Law was established in 2000.;
+    The SoL admits more than 300 students in-campus,;
+    around 900 off-campus studying at the Community Colleges;
+    in the Mekong Delta provinces and about 40 graduate students.\n\n
+  </string><string name="CL_mission">
+    Each department in the school of law has a different mission.;
+    The Department of Administrative Law aim to train students;
+    knowledge on state management and capacity to quickly adapt to social changes.;
+    The Department of Judicial Law’s mission is to train students;
+    Commercial Law and International Law that meet the increasing demand;
+    of the society in the process of international economic integration.;
+    Lastly, the department of Commercial Law aim to provide;
+    the program Law professional in criminal and civil law,;
+    and meet the requirement of employers in concerned sectors.\n\n
+  </string><string name="CL_course">
+    There are 3 departments and 1 center in the School of Law.;
+    School of Law provides 3 bachelor programs,;
+    administrative law, judicial law and commercial law.;
+    Also, there is a master program for economic law.;
+    There’s ‘Clinical Legal Education program’ ;
+    from the center of Comparative law.\n\n
+  </string><string name="cBackButton">Choose another option</string><string name="eBackButton">Choose another option</string><string name="IBackButton">Choose another option</string><string name="Info">Info</string><string name="Vision">Vision</string><string name="Course">Course</string><string name="Mission">Mission</string></file><file name="ic_arrow_back_black_24dp" path="/home/tvngoan/Development/CTU-Explorer/ARmode/src/main/res/drawable/ic_arrow_back_black_24dp.xml" qualifiers="" type="drawable"/><file name="ic_left_24dp" path="/home/tvngoan/Development/CTU-Explorer/ARmode/src/main/res/drawable/ic_left_24dp.xml" qualifiers="" type="drawable"/><file name="app_banner" path="/home/tvngoan/Development/CTU-Explorer/ARmode/src/main/res/drawable-xhdpi/app_banner.png" qualifiers="xhdpi-v4" type="drawable"/><file name="left" path="/home/tvngoan/Development/CTU-Explorer/ARmode/src/main/res/drawable-xhdpi/left.png" qualifiers="xhdpi-v4" type="drawable"/><file name="cloud" path="/home/tvngoan/Development/CTU-Explorer/ARmode/src/main/res/drawable-xhdpi/cloud.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ic_arrow_back_black_24dp" path="/home/tvngoan/Development/CTU-Explorer/ARmode/src/main/res/drawable-xhdpi/ic_arrow_back_black_24dp.xml" qualifiers="xhdpi-v4" type="drawable"/><file name="right" path="/home/tvngoan/Development/CTU-Explorer/ARmode/src/main/res/drawable-xhdpi/right.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ic_left_24dp" path="/home/tvngoan/Development/CTU-Explorer/ARmode/src/main/res/drawable-xhdpi/ic_left_24dp.xml" qualifiers="xhdpi-v4" type="drawable"/></source><source path="/home/tvngoan/Development/CTU-Explorer/ARmode/build/generated/res/rs/debug"/><source path="/home/tvngoan/Development/CTU-Explorer/ARmode/build/generated/res/resValues/debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/home/tvngoan/Development/CTU-Explorer/ARmode/src/debug/res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug" generated-set="debug$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/home/tvngoan/Development/CTU-Explorer/ARmode/src/debug/res"/></dataSet><mergedItems/></merger>

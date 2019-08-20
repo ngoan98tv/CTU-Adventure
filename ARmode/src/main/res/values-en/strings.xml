@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CTUexplorer</string>
+    <string name="game_view_content_description">Game view</string>
+    <string name="CICT1">
+    Hi!　Welcome to the College of I.C.T!;
+    Students majoring in I.C.T use this building.;
+    What do you want to know about this building?\n\n
+  </string>
+    <string name="CICT_info">
+    The College of I.C.T was established in 1994.;
+    There are 94 academic staffs,\nincluding 24 Ph.Ds and 51 masters.;
+    About 3400 students are studying in this building.\n\n
+  </string>
+    <string name="CICT_vision">
+    There are three main vision of C.I.C.T towards 2020.;
+    Becoming a well-known ICT research and education institution in Vietnam,;
+    playing a core role in ICT research, education in the Mekong Delta and the Southern Region,;
+    Also reaching the training standards from the advanced universities in the world.;
+    C.I.C.T\'s mission is to offer various programs,;
+    research and technology transfer in the field of I.C.T.\n\n
+  </string>
+    <string name="CICT_course">
+    C.I.C.T offers 5 undergraduate programs.;
+    There are Information Systems, Computer Networks and Communications,;
+    Software Engineering, Computer Science, and Information Technology.;
+    There is special bilingual program using all of the disciplines in French.;
+    C.I.C.T also offers 3 postgraduate programs.;
+    There are Information Systems and Computer Science program for master degree.;
+    There is Information Systems program for Ph.D, too.\n\n
+  </string>
+    <string name="CE1">
+    Hi! Welcome to the College of Economics!;
+    Students majoring in economics use this building.;
+    What do you want to know about this college?\n\n;
+  </string>
+    <string name="CE_info">
+    The College of Economics was established in 1979.;
+    There are 101 academic staffs, including 10 Ph.Ds and more than 65 masters.;
+    More than 1000 students have studied in this building.\n\n
+  </string>
+
+    <string name="CE_vision">
+    There are two main visions of College of Economics.;
+    Becoming one of the top colleges of CTU and of Vietnam,;
+    Becoming a college with intensive curriculum,;
+    scientific research in quality in the Mekong Delta region.\n\n;
+  </string>
+
+    <string name="CE_course">
+    The College of Economics can be divided into 9 major,;
+    Business administration, Economics, Marketing, and more.;
+    Its research area is divided into 4 parts,;
+    Enterprise development, research of domestic and foreign markets,;
+    project management and evaluation,;
+    and agricultural planning and rural development.\n\n
+  </string>
+
+    <string name="CL1">
+    Hi! Welcome to the School of Law!;
+    Students majoring in law use this building.;
+    For more information, click the button below.\n\n
+  </string>
+
+    <string name="CL_info">
+    The School of Law was established in 2000.;
+    The SoL admits more than 300 students in-campus,;
+    around 900 off-campus studying at the Community Colleges;
+    in the Mekong Delta provinces and about 40 graduate students.\n\n
+  </string>
+
+    <string name="CL_mission">
+    Each department in the school of law has a different mission.;
+    The Department of Administrative Law aim to train students;
+    knowledge on state management and capacity to quickly adapt to social changes.;
+    The Department of Judicial Law’s mission is to train students;
+    Commercial Law and International Law that meet the increasing demand;
+    of the society in the process of international economic integration.;
+    Lastly, the department of Commercial Law aim to provide;
+    the program Law professional in criminal and civil law,;
+    and meet the requirement of employers in concerned sectors.\n\n
+  </string>
+
+    <string name="CL_course">
+    There are 3 departments and 1 center in the School of Law.;
+    School of Law provides 3 bachelor programs,;
+    administrative law, judicial law and commercial law.;
+    Also, there is a master program for economic law.;
+    There’s ‘Clinical Legal Education program’ ;
+    from the center of Comparative law.\n\n
+  </string>
+  <string name="cBackButton">Choose another option</string>
+  <string name="eBackButton">Choose another option</string>
+  <string name="IBackButton">Choose another option</string>
+  <string name="Info">Info</string>
+  <string name="Vision">Vision</string>
+  <string name="Course">Course</string>
+  <string name="Mission">Mission</string>
+</resources>
