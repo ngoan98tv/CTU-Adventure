@@ -20,6 +20,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Locale;
 
@@ -76,6 +77,7 @@ public class UnityPlayerActivity extends Activity
         setContentView(R.layout.layout_main);
 
         Intent intent = getIntent();
+        Toast.makeText(this, intent.getStringExtra("code"), Toast.LENGTH_SHORT).show();
         String buildingCode = intent.getStringExtra("code");
 
         this.fl_forUnity = (FrameLayout) findViewById(R.id.fl_forUnity);
@@ -180,7 +182,7 @@ public class UnityPlayerActivity extends Activity
          // ---------------- Under This line, Setting temporary Buttons ------------------ //
          ***********************************************************************************/
 
-        if (buildingCode == "CICT") {
+        if (buildingCode.equals("CICT")) {
             cLeftButton.setVisibility(View.VISIBLE);
             cRightButton.setVisibility(View.VISIBLE);
 
@@ -190,7 +192,7 @@ public class UnityPlayerActivity extends Activity
             cSpeech();
         }
 
-        else if (buildingCode == "CE") {
+        else if (buildingCode.equals("CE")) {
             eLeftButton.setVisibility(View.VISIBLE);
             eRightButton.setVisibility(View.VISIBLE);
 
@@ -200,7 +202,7 @@ public class UnityPlayerActivity extends Activity
             eSpeech();
         }
 
-         else if (buildingCode == "LAW") {
+         else if (buildingCode.equals("LAW")) {
             lLeftButton.setVisibility(View.VISIBLE);
             lRightButton.setVisibility(View.VISIBLE);
 
@@ -382,13 +384,13 @@ public class UnityPlayerActivity extends Activity
         cBackButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                cictIdx = 2;
-                cInfoIdx = 0; cVisionIdx = 0; cCourseIdx = 0;
-
-                cText.setText(cSplit[cictIdx]);
-                cBackButton.setVisibility(View.INVISIBLE);
-                cButtons.setVisibility(View.VISIBLE);
-                finish();
+//                cictIdx = 2;
+//                cInfoIdx = 0; cVisionIdx = 0; cCourseIdx = 0;
+//
+//                cText.setText(cSplit[cictIdx]);
+//                cBackButton.setVisibility(View.INVISIBLE);
+//                cButtons.setVisibility(View.VISIBLE);
+                UnityPlayerActivity.this.finish();
             }
         });
 
