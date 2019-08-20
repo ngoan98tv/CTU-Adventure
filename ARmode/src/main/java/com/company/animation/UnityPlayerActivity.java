@@ -75,7 +75,8 @@ public class UnityPlayerActivity extends Activity
         mUnityPlayer = new UnityPlayer(this);
         setContentView(R.layout.layout_main);
 
-        String buildingCode = "CICT";
+        Intent intent = getIntent();
+        String buildingCode = intent.getStringExtra("code");
 
         this.fl_forUnity = (FrameLayout) findViewById(R.id.fl_forUnity);
         this.fl_forUnity.addView(mUnityPlayer.getView(), FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT);

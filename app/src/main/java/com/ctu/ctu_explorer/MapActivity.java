@@ -179,7 +179,6 @@ public class MapActivity extends AppCompatActivity implements OnItemSelectedList
                 if (result.equals("Blank")) {
                     Toast.makeText(this, "Cannot detect this time, please try again", Toast.LENGTH_LONG).show();
                 } else {
-                    Toast.makeText(this, result, Toast.LENGTH_LONG).show();
                     Intent arIntend = new Intent(MapActivity.this, UnityPlayerActivity.class);
                     arIntend.putExtra("code", result);
                     startActivity(arIntend);
