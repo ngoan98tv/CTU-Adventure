@@ -7,25 +7,25 @@
     <string name="my_location_btn_desc">My Location</string>
     <string name="osrm_server_url">http://34.87.84.153/route/v1/foot/</string>
     <string-array name="buildings_array">
-        <item>Select a destination...</item>
-        <item>College of ICT</item>
-        <item>College of Economics</item>
-        <item>School of Law</item>
-        <item>College of Agriculture</item>
-        <item>College of Aquaculture &amp; Fisheries</item>
-        <item>College of Engineering Technology</item>
-        <item>College of Environment &amp; Natural Resources</item>
-        <item>College of Natural Sciences</item>
+        <item>Chọn điểm đến...</item>
+        <item>Khoa CNTT &amp; TT</item>
+        <item>Khoa Kinh Tế</item>
+        <item>Khoa Luật</item>
+        <item>Khoa Nông nghiệp</item>
+        <item>Khoa Thủy sản</item>
+        <item>Khoa Công nghệ</item>
+        <item>Khoa Môi trường và tài nguyên thiên nhiên</item>
+        <item>Khoa Khoa học Tự nhiên</item>
     </string-array>
     <string-array name="languages">
         <item>Chọn ngôn ngữ</item>
         <item>Anh</item>
         <item>Tiếng Việt</item>
     </string-array>
-    <string name="first_draweritem">trong khoảng</string>
+    <string name="first_draweritem">Giới thiệu</string>
     <string name="second_draweritem">Hướng dẫn</string>
-    <string name="third_draweritem">Thông tin công trình</string>
-    <string name="fourth_draweritem">Báo cáo vấn đề</string>
+    <string name="third_draweritem">Thông tin các khoa</string>
+    <string name="fourth_draweritem">Phản hồi</string>
     <string name="third_subitem1">CICT</string>
     <string name="third_subitem2">LAW</string>
     <string name="language">Ngôn ngữ:</string>
