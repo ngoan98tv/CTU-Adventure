@@ -22,7 +22,6 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.company.cube.UnityPlayerActivity;
-import com.example.labeling.ImageLabeling;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -146,7 +145,7 @@ public class MapActivity extends AppCompatActivity implements OnItemSelectedList
         cameraBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivityForResult(new Intent(MapActivity.this, ImageLabeling.class), 1);
+            startActivityForResult(new Intent(MapActivity.this, ImageLabeling.class), 1);
             }
         });
 
@@ -179,7 +178,15 @@ public class MapActivity extends AppCompatActivity implements OnItemSelectedList
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == 1) {
             if (resultCode == RESULT_OK) {
-                //TODO: data.getStringExtra("result");
+                String result = data.getStringExtra("result");
+//                if (result.equals("Blank")) {
+//                    Toast.makeText(this, "Cannot detect this time, please try again", Toast.LENGTH_LONG).show();
+//                } else {
+                    Intent arIntend = new Intent(this, UnityPlayerActivity.class);
+                    arIntend.putExtra("code", result);
+                    startActivity(arIntend);
+//                }
+
             }
         }
     }
