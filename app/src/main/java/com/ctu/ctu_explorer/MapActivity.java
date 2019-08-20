@@ -16,12 +16,10 @@ import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
-import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.company.cube.UnityPlayerActivity;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -40,7 +38,6 @@ import org.osmdroid.views.overlay.Polyline;
 
 import java.util.ArrayList;
 import java.util.Locale;
-import java.util.Map;
 
 public class MapActivity extends AppCompatActivity implements OnItemSelectedListener {
     private static final int MULTIPLE_PERMISSION_REQUEST_CODE = 4;
@@ -149,7 +146,6 @@ public class MapActivity extends AppCompatActivity implements OnItemSelectedList
             }
         });
 
-        //this is for languge change
         currentLanguage = getIntent().getStringExtra(currentLang);
 
         spinner = (Spinner) findViewById(R.id.lang_selection);
@@ -183,6 +179,7 @@ public class MapActivity extends AppCompatActivity implements OnItemSelectedList
                     Toast.makeText(this, "Cannot detect this time, please try again", Toast.LENGTH_LONG).show();
                 } else {
                     Toast.makeText(this, result, Toast.LENGTH_LONG).show();
+//                    TODO: Trigger AR Module
 //                    Intent arIntend = new Intent(MapActivity.this, UnityPlayerActivity.class);
 //                    arIntend.putExtra("code", result);
 //                    startActivity(arIntend);
@@ -192,7 +189,6 @@ public class MapActivity extends AppCompatActivity implements OnItemSelectedList
         }
     }
 
-    //this is for language change
     public void setLocale(String localeName) {
         if (!localeName.equals(currentLanguage)) {
             myLocale = new Locale(localeName);
