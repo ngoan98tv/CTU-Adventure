@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.ctu.ctu_explorer">
 
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -17,11 +17,23 @@
         android:label="@string/app_name"
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".MapActivity" android:launchMode="singleInstance" />
-        <activity android:name=".ImageLabeling"
+        <activity
+            android:name=".MapActivity"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name=".ImageLabeling"
+            android:parentActivityName=".MapActivity" />
+        <activity
+            android:name=".About"
+            android:parentActivityName=".MapActivity"/>
+        <activity
+            android:name=".BuildingsActivity"
+            android:parentActivityName=".MapActivity"/>
+        <activity
+            android:name=".ReportForm"
             android:parentActivityName=".MapActivity"/>
         <activity android:name=".SplashScreenActivity">
             <intent-filter>

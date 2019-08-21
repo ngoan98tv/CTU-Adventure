@@ -26,9 +26,10 @@
     <string name="second_draweritem">Hướng dẫn</string>
     <string name="third_draweritem">Thông tin các khoa</string>
     <string name="fourth_draweritem">Phản hồi</string>
-    <string name="third_subitem1">CICT</string>
-    <string name="third_subitem2">LAW</string>
+    <string name="third_subitem1">Khoa CNTT và Truyền Thông</string>
+    <string name="third_subitem2">Khoa Luật</string>
     <string name="language">Ngôn ngữ:</string>
     <string name="Permissiondenied">Không thể tải bản đồ mà không có tất cả các quyền được cấp</string>
     <string name="Permission_GPS">Vui lòng bật GPS để có được vị trí của bạn</string>
+    <string name="third_subitem3">Khoa Kinh Tế</string>
 </resources>
