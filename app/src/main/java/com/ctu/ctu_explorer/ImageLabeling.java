@@ -53,6 +53,8 @@ public class ImageLabeling extends AppCompatActivity {
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
                 == PackageManager.PERMISSION_DENIED) {
             ActivityCompat.requestPermissions(this, new String[] {Manifest.permission.CAMERA}, REQUEST_CAMERA);
+        } else {
+            dispatchTakePictureIntent();
         }
     }
 
