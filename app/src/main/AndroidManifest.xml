@@ -26,7 +26,7 @@
         android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".MapActivity" />
+        <activity android:name=".MapActivity" android:launchMode="singleInstance" />
         <activity android:name=".ImageLabeling"
             android:parentActivityName=".MapActivity"/>
         <activity android:name=".SplashScreenActivity">

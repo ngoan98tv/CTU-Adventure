@@ -22,10 +22,12 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.util.Locale;
 
-public class UnityPlayerActivity extends Activity
-{
+public class UnityPlayerActivity extends AppCompatActivity {
+
     protected UnityPlayer mUnityPlayer; // don't change the name of this variable; referenced from native code
 
     /*********************************************
@@ -384,13 +386,12 @@ public class UnityPlayerActivity extends Activity
         cBackButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                cictIdx = 2;
-//                cInfoIdx = 0; cVisionIdx = 0; cCourseIdx = 0;
-//
-//                cText.setText(cSplit[cictIdx]);
-//                cBackButton.setVisibility(View.INVISIBLE);
-//                cButtons.setVisibility(View.VISIBLE);
-                UnityPlayerActivity.this.finish();
+                cictIdx = 2;
+                cInfoIdx = 0; cVisionIdx = 0; cCourseIdx = 0;
+
+                cText.setText(cSplit[cictIdx]);
+                cBackButton.setVisibility(View.INVISIBLE);
+                cButtons.setVisibility(View.VISIBLE);
             }
         });
 
@@ -770,28 +771,7 @@ public class UnityPlayerActivity extends Activity
         mBackButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                cText.setVisibility(View.INVISIBLE);
-                eText.setVisibility(View.INVISIBLE);
-                lText.setVisibility(View.INVISIBLE);
-
-                cButtons.setVisibility(View.INVISIBLE);
-                eButtons.setVisibility(View.INVISIBLE);
-                lButtons.setVisibility(View.INVISIBLE);
-
-                cictIdx = 0;
-                cInfoIdx = 0;
-                cVisionIdx = 0;
-                cCourseIdx = 0;
-
-                eIdx = 0;
-                eInfoIdx = 0;
-                eVisionIdx = 0;
-                eCourseIdx = 0;
-
-                lIdx = 0;
-                lInfoIdx = 0;
-                lMissionIdx = 0;
-                lCourseIdx = 0;
+                finish();
             }
         });
 
