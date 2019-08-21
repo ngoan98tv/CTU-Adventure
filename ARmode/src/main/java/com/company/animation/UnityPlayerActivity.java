@@ -127,7 +127,7 @@ public class UnityPlayerActivity extends AppCompatActivity {
                     if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
                         Log.e("error", "This Language is not supported");
                     } else {
-                        tts.setPitch(0.5f);
+                        tts.setPitch(0.7f);
                     }
                 }
                 else {
@@ -185,33 +185,54 @@ public class UnityPlayerActivity extends AppCompatActivity {
          ***********************************************************************************/
 
         if (buildingCode.equals("CICT")) {
-            cLeftButton.setVisibility(View.VISIBLE);
-            cRightButton.setVisibility(View.VISIBLE);
+            handler.postDelayed(new Runnable(){
+                @Override
+                public void run(){
+                    cloud.setVisibility(View.VISIBLE);
 
-            cText.setVisibility(View.VISIBLE);
-            cText.setText(cSplit[0]);
+                    cLeftButton.setVisibility(View.VISIBLE);
+                    cRightButton.setVisibility(View.VISIBLE);
 
-            cSpeech();
+                    cText.setVisibility(View.VISIBLE);
+                    cText.setText(cSplit[0]);
+
+                    cSpeech();
+                }
+            },1500);
         }
 
         else if (buildingCode.equals("CE")) {
-            eLeftButton.setVisibility(View.VISIBLE);
-            eRightButton.setVisibility(View.VISIBLE);
+            handler.postDelayed(new Runnable(){
+                @Override
+                public void run(){
+                    cloud.setVisibility(View.VISIBLE);
 
-            eText.setVisibility(View.VISIBLE);
-            eText.setText(eSplit[0]);
+                    eLeftButton.setVisibility(View.VISIBLE);
+                    eRightButton.setVisibility(View.VISIBLE);
 
-            eSpeech();
+                    eText.setVisibility(View.VISIBLE);
+                    eText.setText(eSplit[0]);
+
+                    eSpeech();
+                }
+            },1500);
         }
 
          else if (buildingCode.equals("LAW")) {
-            lLeftButton.setVisibility(View.VISIBLE);
-            lRightButton.setVisibility(View.VISIBLE);
+            handler.postDelayed(new Runnable(){
+                @Override
+                public void run(){
+                    cloud.setVisibility(View.VISIBLE);
 
-            lText.setVisibility(View.VISIBLE);
-            lText.setText(lSplit[0]);
+                    lLeftButton.setVisibility(View.VISIBLE);
+                    lRightButton.setVisibility(View.VISIBLE);
 
-            lSpeech();
+                    lText.setVisibility(View.VISIBLE);
+                    lText.setText(lSplit[0]);
+
+                    lSpeech();
+                }
+            },1500);
         }
 
         /***********************************************************************************
