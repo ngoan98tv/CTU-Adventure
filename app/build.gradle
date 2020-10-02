@@ -1,14 +1,20 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 29
     defaultConfig {
         applicationId "com.ctu.ctu_explorer"
         minSdkVersion 24
-        targetSdkVersion 28
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        ndk {
+            abiFilters 'armeabi-v7a', 'x86'
+        }
+    }
+    aaptOptions {
+        noCompress "tflite"
     }
     buildTypes {
         release {
@@ -32,7 +38,9 @@ dependencies {
     implementation 'com.github.MKergall:osmbonuspack:6.6.0'
     implementation 'com.google.android.gms:play-services-location:17.0.0'
     implementation "com.mikepenz:materialdrawer:6.1.1"
-
+    implementation 'com.google.firebase:firebase-ml-vision:23.0.0'
+    implementation 'com.google.firebase:firebase-ml-vision-automl:18.0.1'
+    implementation project(':ARmode')
 }
 
 apply plugin: 'com.google.gms.google-services'

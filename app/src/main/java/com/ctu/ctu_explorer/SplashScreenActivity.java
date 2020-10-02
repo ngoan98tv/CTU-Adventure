@@ -18,10 +18,7 @@ public class SplashScreenActivity extends AppCompatActivity {
                 .withTargetActivity(MapActivity.class)
                 .withSplashTimeOut(2000)
                 .withBackgroundColor(Color.parseColor("#ffffff"))
-                .withLogo(R.drawable.logo)
-                .withAfterLogoText("CTU Explorer");
-
-        config.getAfterLogoTextView().setTextSize(24);
+                .withLogo(R.drawable.logo);
 
         View splashScreen = config.create();
         setContentView(splashScreen);
