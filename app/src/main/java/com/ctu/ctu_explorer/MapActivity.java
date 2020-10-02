@@ -126,7 +126,8 @@ public class MapActivity extends AppCompatActivity implements OnItemSelectedList
 
         checkPermissionsStateAndSetupMap();
         getCurrentLocation();
-        mapView.getOverlays().add(new MapEventsOverlay(mReceive));
+
+        if (mapView != null) mapView.getOverlays().add(new MapEventsOverlay(mReceive));
 
         Spinner buildingMenu = findViewById(R.id.building_selection);
         buildingMenu.setOnItemSelectedListener(this);
@@ -340,7 +341,7 @@ public class MapActivity extends AppCompatActivity implements OnItemSelectedList
         //if you make changes to the configuration, use
         //SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         //Configuration.getInstance().load(this, PreferenceManager.getDefaultSharedPreferences(this));
-        mapView.onResume(); //needed for compass, my location overlays, v6.0.0 and up
+        if (mapView != null) mapView.onResume(); //needed for compass, my location overlays, v6.0.0 and up
 
     }
 
@@ -350,6 +351,6 @@ public class MapActivity extends AppCompatActivity implements OnItemSelectedList
         //if you make changes to the configuration, use
         //SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         //Configuration.getInstance().save(this, prefs);
-        mapView.onPause();  //needed for compass, my location overlays, v6.0.0 and up
+        if (mapView != null) mapView.onPause();  //needed for compass, my location overlays, v6.0.0 and up
     }
 }
