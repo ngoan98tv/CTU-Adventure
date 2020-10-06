@@ -1,1 +1,2 @@
-include ':app', ':ARmode'
+include ':armode'
+include ':app'

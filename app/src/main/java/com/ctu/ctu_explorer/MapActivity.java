@@ -6,12 +6,9 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.location.Location;
+import android.os.Bundle;
 import android.os.StrictMode;
 import android.preference.PreferenceManager;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-import androidx.appcompat.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.AdapterView;
@@ -20,7 +17,11 @@ import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.company.animation.UnityPlayerActivity;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+
+import com.example.arproject.ArActivity;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -42,28 +43,28 @@ import java.util.Locale;
 
 public class MapActivity extends AppCompatActivity implements OnItemSelectedListener {
     private static final int MULTIPLE_PERMISSION_REQUEST_CODE = 4;
+    Spinner spinner;
+    Locale myLocale;
+    String currentLanguage = "en", currentLang;
     private MapView mapView;
     private GeoPoint currentLocation;
     private Marker currentMarker;
     private GeoPoint destinationPoint;
     private Marker destinationMarker;
     private Polyline routingOverlay;
-    private FusedLocationProviderClient fusedLocationClient;
-    Spinner spinner;
-    Locale myLocale;
-    String currentLanguage = "en", currentLang;
-
-    final MapEventsReceiver mReceive = new MapEventsReceiver(){
+    final MapEventsReceiver mReceive = new MapEventsReceiver() {
         @Override
         public boolean singleTapConfirmedHelper(GeoPoint p) {
-            setCurrentLocation(p.getLatitude(),p.getLongitude());
+            setCurrentLocation(p.getLatitude(), p.getLongitude());
             return false;
         }
+
         @Override
         public boolean longPressHelper(GeoPoint p) {
             return false;
         }
     };
+    private FusedLocationProviderClient fusedLocationClient;
 
     public void setCurrentLocation(double latitude, double longitude) {
         mapView.getOverlays().remove(currentMarker);
@@ -144,7 +145,12 @@ public class MapActivity extends AppCompatActivity implements OnItemSelectedList
         cameraBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            startActivityForResult(new Intent(MapActivity.this, ImageLabeling.class), 1);
+                boolean cameraAvailable = checkCameraHardware(MapActivity.this);
+                if (cameraAvailable) {
+                    startActivity(new Intent(MapActivity.this, ArActivity.class));
+                } else {
+                    Toast.makeText(MapActivity.this, "No camera available.", Toast.LENGTH_LONG).show();
+                }
             }
         });
 
@@ -166,27 +172,20 @@ public class MapActivity extends AppCompatActivity implements OnItemSelectedList
                         break;
                 }
             }
+
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
             }
         });
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == 1) {
-            if (resultCode == RESULT_OK) {
-                String result = data.getStringExtra("result");
-                if (result.equals("Blank")) {
-                    Toast.makeText(this, "Cannot detect this time, please try again", Toast.LENGTH_LONG).show();
-                } else {
-                    Intent arIntend = new Intent(MapActivity.this, UnityPlayerActivity.class);
-                    arIntend.putExtra("code", result);
-                    startActivity(arIntend);
-                }
-
-            }
-        }
+    /**
+     * Check if this device has a camera
+     */
+    private boolean checkCameraHardware(Context context) {
+        // this device has a camera
+        // no camera on this device
+        return context.getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA);
     }
 
     public void setLocale(String localeName) {
@@ -335,22 +334,24 @@ public class MapActivity extends AppCompatActivity implements OnItemSelectedList
         }
     }
 
-    public void onResume(){
+    public void onResume() {
         super.onResume();
         //this will refresh the osmdroid configuration on resuming.
         //if you make changes to the configuration, use
         //SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         //Configuration.getInstance().load(this, PreferenceManager.getDefaultSharedPreferences(this));
-        if (mapView != null) mapView.onResume(); //needed for compass, my location overlays, v6.0.0 and up
+        if (mapView != null)
+            mapView.onResume(); //needed for compass, my location overlays, v6.0.0 and up
 
     }
 
-    public void onPause(){
+    public void onPause() {
         super.onPause();
         //this will refresh the osmdroid configuration on resuming.
         //if you make changes to the configuration, use
         //SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         //Configuration.getInstance().save(this, prefs);
-        if (mapView != null) mapView.onPause();  //needed for compass, my location overlays, v6.0.0 and up
+        if (mapView != null)
+            mapView.onPause();  //needed for compass, my location overlays, v6.0.0 and up
     }
 }
