@@ -1,4 +1,4 @@
-package com.example.arproject;
+package com.ctu.ctu_explorer;
 
 import android.graphics.Bitmap;
 

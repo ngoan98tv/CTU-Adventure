@@ -1,8 +1,17 @@
-package com.example.arproject;
+package com.ctu.ctu_explorer;
 
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.HandlerThread;
+import android.view.PixelCopy;
+import android.view.View;
+import android.widget.ImageButton;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.ar.core.Anchor;
@@ -17,16 +26,6 @@ import com.google.ar.sceneform.animation.ModelAnimator;
 import com.google.ar.sceneform.rendering.ModelRenderable;
 import com.google.ar.sceneform.ux.ArFragment;
 import com.google.ar.sceneform.ux.TransformableNode;
-
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.os.Handler;
-import android.os.HandlerThread;
-import android.view.PixelCopy;
-import android.view.View;
-
-import android.widget.Toast;
 
 import java.lang.ref.WeakReference;
 import java.util.List;
@@ -44,6 +43,9 @@ public class ArActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ImageButton backBtn = findViewById(R.id.back_btn);
+        backBtn.setOnClickListener(view -> finish());
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(view -> takePhoto());
