@@ -40,7 +40,7 @@
             android:scrollHorizontally="true"
             android:text="Loading..."
             android:textColor="#000"
-            android:textSize="18dp"
+            android:textSize="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/reload_btn"
             app:layout_constraintStart_toEndOf="@+id/back_btn"

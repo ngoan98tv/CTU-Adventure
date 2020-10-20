@@ -45,6 +45,7 @@ public class ArActivity extends AppCompatActivity {
     private Buildings buildings;
     private Integer triedCount;
     private ImageButton reloadBtn;
+    private CountDownTimer timer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -114,10 +115,10 @@ public class ArActivity extends AppCompatActivity {
             }
         }
 
-        if (detectedBuilding == null && triedCount == null) {
+        if (detectedBuilding == null && triedCount == null && timer == null) {
             ArSceneView view = fragment.getArSceneView();
             if (view.getHeight() > 0 && view.getWidth() > 0) {
-                CountDownTimer timer = new CountDownTimer(1000, 1000) {
+                timer = new CountDownTimer(1000, 1000) {
                     @Override
                     public void onTick(long l) {}
 
