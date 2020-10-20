@@ -69,4 +69,29 @@
         android:layout_margin="32dp"
         app:srcCompat="@android:drawable/ic_menu_camera" />
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="92dp"
+        >
+        <TextView
+            android:id="@+id/ar_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="12dp"
+            android:textAlignment="center"
+            android:background="#99000000"
+            android:textColor="#fefefe"
+            android:text="Hello"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -46,6 +46,7 @@ public class ArActivity extends AppCompatActivity {
     private Integer triedCount;
     private ImageButton reloadBtn;
     private CountDownTimer timer;
+    private TextView subtitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +62,7 @@ public class ArActivity extends AppCompatActivity {
         reloadBtn = findViewById(R.id.reload_btn);
         reloadBtn.setOnClickListener(view -> startDetectBuilding());
         headerText = findViewById(R.id.ar_header_text);
+        subtitle = findViewById(R.id.ar_subtitle);
         buildings = new Buildings(this);
 
         fragment = (ArFragment) getSupportFragmentManager().findFragmentById(R.id.sceneform_fragment);
