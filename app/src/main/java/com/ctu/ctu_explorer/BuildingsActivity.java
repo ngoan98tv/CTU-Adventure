@@ -2,6 +2,7 @@ package com.ctu.ctu_explorer;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Window;
 import android.widget.ImageView;
@@ -12,17 +13,21 @@ public class BuildingsActivity extends AppCompatActivity {
     TextView tv, tv2;
     ScrollView sv;
     ImageView iv;
+    String code;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
-//        getSupportActionBar().hide();
         setContentView(R.layout.activity_buildings);
+
+        Intent intent = getIntent();
+        code = intent.getStringExtra("code");
 
         tv = (TextView)findViewById(R.id.tv);
         tv2 = (TextView) findViewById(R.id.tv2);
         sv = (ScrollView)findViewById(R.id.sv);
         iv = (ImageView)findViewById(R.id.iv);
+
+        tv.setText(code);
     }
 }

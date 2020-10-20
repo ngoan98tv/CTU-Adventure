@@ -39,6 +39,14 @@ public final class Buildings {
         descriptions = Arrays.asList(context.getResources().getStringArray(R.array.buildings_desc));
     }
 
+    public List<String> getNames() {
+        return names;
+    }
+
+    public List<String> getCodes() {
+        return codes;
+    }
+
     public String getNameByCode(String code) {
         int index = codes.indexOf(code);
         if (index < 0) return "Unknown";
