@@ -6,6 +6,10 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.os.HandlerThread;
+import android.service.voice.VoiceInteractionService;
+import android.speech.tts.TextToSpeech;
+import android.speech.tts.UtteranceProgressListener;
+import android.speech.tts.Voice;
 import android.view.PixelCopy;
 import android.view.View;
 import android.widget.ImageButton;
@@ -31,6 +35,7 @@ import com.google.ar.sceneform.ux.TransformableNode;
 
 import java.lang.ref.WeakReference;
 import java.util.List;
+import java.util.Locale;
 
 public class ArActivity extends AppCompatActivity {
     private ArFragment fragment;
@@ -47,6 +52,7 @@ public class ArActivity extends AppCompatActivity {
     private ImageButton reloadBtn;
     private CountDownTimer timer;
     private TextView subtitle;
+    private TextToSpeech tts;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,6 +79,9 @@ public class ArActivity extends AppCompatActivity {
         });
 
         modelLoader = new ModelLoader(new WeakReference<>(this));
+
+        tts = new TextToSpeech(this, status -> {});
+        tts.setSpeechRate((float) 1.5);
     }
 
     private void addObject(Uri model) {
@@ -218,6 +227,13 @@ public class ArActivity extends AppCompatActivity {
         }
     }
 
+    private void onBuildingDetected(String result) {
+        detectedBuilding = result;
+        headerText.setText(buildings.getNameByCode(result));
+        reloadBtn.setVisibility(View.VISIBLE);
+        startReading(buildings.getDescriptionByCode(result));
+    }
+
     private  void detectBuilding(Bitmap image) {
         triedCount += 1;
         runOnUiThread(() -> headerText.setText("(" + triedCount +") Detecting..."));
@@ -236,11 +252,7 @@ public class ArActivity extends AppCompatActivity {
                 };
                 timer.start();
             } else {
-                detectedBuilding = result;
-                runOnUiThread(() -> {
-                    headerText.setText(buildings.getNameByCode(result));
-                    reloadBtn.setVisibility(View.VISIBLE);
-                });
+                runOnUiThread(() -> onBuildingDetected(result));
             }
         });
     }
@@ -264,6 +276,27 @@ public class ArActivity extends AppCompatActivity {
             }
             handlerThread.quitSafely();
         }, new Handler(handlerThread.getLooper()));
+    }
+
+    private void startReading(String text) {
+        subtitle.setText(text);
+        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, text);
+        tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+            @Override
+            public void onStart(String utteranceId) {
+                subtitle.setVisibility(View.VISIBLE);
+            }
+
+            @Override
+            public void onDone(String utteranceId) {
+                subtitle.setVisibility(View.INVISIBLE);
+            }
+
+            @Override
+            public void onError(String utteranceId) {
+                Toast.makeText(ArActivity.this, "Speech error!", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
 }

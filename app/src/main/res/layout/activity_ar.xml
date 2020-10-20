@@ -86,6 +86,7 @@
             android:textAlignment="center"
             android:background="#99000000"
             android:textColor="#fefefe"
+            android:visibility="invisible"
             android:text="Hello"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"

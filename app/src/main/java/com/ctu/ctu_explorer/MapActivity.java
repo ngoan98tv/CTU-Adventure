@@ -193,7 +193,7 @@ public class MapActivity extends AppCompatActivity implements OnItemSelectedList
             Resources res = getResources();
             DisplayMetrics dm = res.getDisplayMetrics();
             android.content.res.Configuration conf = res.getConfiguration();
-            conf.locale = myLocale;
+            conf.setLocale(myLocale);
             res.updateConfiguration(conf, dm);
             Intent refresh = new Intent(this, MapActivity.class);
             refresh.putExtra(currentLang, localeName);
