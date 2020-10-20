@@ -39,7 +39,7 @@
             android:padding="8dp"
             android:background="#ffffff"
             android:dropDownWidth="wrap_content"
-            android:entries="@array/buildings_array"
+            android:entries="@array/buildings_name"
             android:spinnerMode="dropdown"
             app:layout_constraintEnd_toStartOf="@+id/capture_btn"
             app:layout_constraintStart_toEndOf="@+id/drawer_btn"

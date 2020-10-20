@@ -3,11 +3,13 @@ package com.ctu.ctu_explorer;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.os.Handler;
 import android.os.HandlerThread;
 import android.view.PixelCopy;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
@@ -38,6 +40,11 @@ public class ArActivity extends AppCompatActivity {
     private boolean isModelAdded;
     private ModelLoader modelLoader;
     private Uri modelUri = Uri.parse("andy_dance.sfb");
+    private TextView headerText;
+    private String detectedBuilding;
+    private Buildings buildings;
+    private Integer triedCount;
+    private ImageButton reloadBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +55,12 @@ public class ArActivity extends AppCompatActivity {
         backBtn.setOnClickListener(view -> finish());
 
         FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(view -> takePhoto());
+        fab.setOnClickListener(view -> startDetectBuilding());
+
+        reloadBtn = findViewById(R.id.reload_btn);
+        reloadBtn.setOnClickListener(view -> startDetectBuilding());
+        headerText = findViewById(R.id.ar_header_text);
+        buildings = new Buildings(this);
 
         fragment = (ArFragment) getSupportFragmentManager().findFragmentById(R.id.sceneform_fragment);
         assert fragment != null;
@@ -99,6 +111,22 @@ public class ArActivity extends AppCompatActivity {
                     addObject(modelUri);
                     isModelAdded = true;
                 }
+            }
+        }
+
+        if (detectedBuilding == null && triedCount == null) {
+            ArSceneView view = fragment.getArSceneView();
+            if (view.getHeight() > 0 && view.getWidth() > 0) {
+                CountDownTimer timer = new CountDownTimer(1000, 1000) {
+                    @Override
+                    public void onTick(long l) {}
+
+                    @Override
+                    public void onFinish() {
+                        startDetectBuilding();
+                    }
+                };
+                timer.start();
             }
         }
     }
@@ -178,10 +206,39 @@ public class ArActivity extends AppCompatActivity {
         }
     }
 
+    private void startDetectBuilding() {
+        triedCount = 0;
+        try {
+            takePhoto();
+        } catch (Exception e) {
+            Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG).show();
+        }
+    }
+
     private  void detectBuilding(Bitmap image) {
+        triedCount += 1;
+        runOnUiThread(() -> headerText.setText("(" + triedCount +") Detecting..."));
+
         BuildingDetector detector = BuildingDetector.getInstance();
         detector.detect(image, result -> {
-            Toast.makeText(ArActivity.this, result, Toast.LENGTH_LONG).show();
+            if (result == null || result.isEmpty()) {
+                CountDownTimer timer = new CountDownTimer(3000, 1000) {
+                    @Override
+                    public void onTick(long remainingMillis) {}
+
+                    @Override
+                    public void onFinish() {
+                        takePhoto();
+                    }
+                };
+                timer.start();
+            } else {
+                detectedBuilding = result;
+                runOnUiThread(() -> {
+                    headerText.setText(buildings.getNameByCode(result));
+                    reloadBtn.setVisibility(View.VISIBLE);
+                });
+            }
         });
     }
 
@@ -200,8 +257,7 @@ public class ArActivity extends AppCompatActivity {
             if (copyResult == PixelCopy.SUCCESS) {
                 detectBuilding(bitmap);
             } else {
-                Toast toast = Toast.makeText(ArActivity.this,"Failed to copyPixels: " + copyResult, Toast.LENGTH_LONG);
-                toast.show();
+                Toast.makeText(this,"Failed to copyPixels: " + copyResult, Toast.LENGTH_LONG).show();
             }
             handlerThread.quitSafely();
         }, new Handler(handlerThread.getLooper()));

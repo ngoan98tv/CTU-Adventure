@@ -5,25 +5,54 @@
     <string name="third_subitem1">College of ICT</string>
     <string name="third_subitem2">School of Law</string>
     <string name="third_draweritem">Building Information</string>
-    <string name="fourth_draweritem">Report Problem</string>
+    <string name="drawer_item_4">Report Problem</string>
     <string name="language">Language:</string>
-    <string name="Permissiondenied">Cant load maps without all the permissions granted</string>
+    <string name="permissions_denied">Cannot load maps without all the permissions granted</string>
     <string name="Permission_GPS">Please enable GPS to get your location</string>
-    <string name="third_subitem3">College of Economic</string>
+    <string name="sub_item_3">College of Economic</string>
     <string-array name="languages">
         <item>Select Language</item>
         <item>English</item>
         <item>Vietnamese</item>
     </string-array>
-    <string-array name="buildings_array">
-        <item>Select a destination...</item>
-        <item>College of ICT</item>
+    <string-array name="buildings_desc">
+        <item>Select a destination…</item>
+        <item>College of Information &amp; Communication Technology</item>
         <item>College of Economics</item>
         <item>School of Law</item>
-        <item>College of Agriculture</item>
+        <item>College of Agriculture &amp; Applied Biology</item>
         <item>College of Aquaculture &amp; Fisheries</item>
         <item>College of Engineering Technology</item>
         <item>College of Environment &amp; Natural Resources</item>
         <item>College of Natural Sciences</item>
+        <item>Administration Building</item>
+        <item>Learning Resource Center</item>
+        <item>School of Political Science</item>
+        <item>School of Social Sciences &amp; Humanities</item>
+        <item>School of Education</item>
+        <item>Department of Physical Education</item>
+        <item>School of Pre-University</item>
+        <item>Dormitory A</item>
+        <item>Dormitory B</item>
+    </string-array>
+    <string-array name="buildings_name">
+        <item>Select a destination…</item>
+        <item>College of Information &amp; Communication Technology</item>
+        <item>College of Economics</item>
+        <item>School of Law</item>
+        <item>College of Agriculture &amp; Applied Biology</item>
+        <item>College of Aquaculture &amp; Fisheries</item>
+        <item>College of Engineering Technology</item>
+        <item>College of Environment &amp; Natural Resources</item>
+        <item>College of Natural Sciences</item>
+        <item>Administration Building</item>
+        <item>Learning Resource Center</item>
+        <item>School of Political Science</item>
+        <item>School of Social Sciences &amp; Humanities</item>
+        <item>School of Education</item>
+        <item>Department of Physical Education</item>
+        <item>School of Pre-University</item>
+        <item>Dormitory A</item>
+        <item>Dormitory B</item>
     </string-array>
 </resources>

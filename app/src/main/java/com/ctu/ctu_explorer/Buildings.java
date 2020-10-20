@@ -1,6 +1,11 @@
 package com.ctu.ctu_explorer;
 
+import android.content.Context;
+
 import org.osmdroid.util.GeoPoint;
+
+import java.util.Arrays;
+import java.util.List;
 
 public final class Buildings {
     public static GeoPoint[] locations = {
@@ -23,4 +28,26 @@ public final class Buildings {
             new GeoPoint(10.033753, 105.769973),
             new GeoPoint(10.029728, 105.764493)
     };
+
+    private List<String> names;
+    private List<String> codes;
+    private List<String> descriptions;
+
+    public Buildings(Context context) {
+        names = Arrays.asList(context.getResources().getStringArray(R.array.buildings_name));
+        codes = Arrays.asList(context.getResources().getStringArray(R.array.buildings_code));
+        descriptions = Arrays.asList(context.getResources().getStringArray(R.array.buildings_desc));
+    }
+
+    public String getNameByCode(String code) {
+        int index = codes.indexOf(code);
+        if (index < 0) return "Unknown";
+        return names.get(index);
+    }
+
+    public String getDescriptionByCode(String code) {
+        int index = codes.indexOf(code);
+        if (index < 0) return "Unknown";
+        return descriptions.get(index);
+    }
 }

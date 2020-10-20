@@ -256,12 +256,12 @@ public class MapActivity extends AppCompatActivity implements OnItemSelectedList
                     }
                 }
                 if (somePermissionWasDenied) {
-                    Toast.makeText(this, R.string.Permissiondenied, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, R.string.permissions_denied, Toast.LENGTH_SHORT).show();
                 } else {
                     setupMap();
                 }
             } else {
-                Toast.makeText(this, R.string.Permissiondenied, Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.permissions_denied, Toast.LENGTH_SHORT).show();
             }
             return;
         }

@@ -2,12 +2,12 @@
     <string name="app_name" translatable="false">CTU Explorer</string>
     <string name="bottom_nav_map_view" translatable="false">Map View</string>
     <string name="bottom_nav_building_info" translatable="false">Building Info</string>
-    <string name="message_default_text">Wel!</string>
+    <string name="message_default_text" translatable="false">Well!</string>
     <string name="capture_btn_desc" translatable="false">Capture</string>
-    <string name="my_location_btn_desc">My Location</string>
-    <string name="osrm_server_url">http://34.87.84.153/route/v1/foot/</string>
-    <string-array name="buildings_array">
-        <item>Select a destination...</item>
+    <string name="my_location_btn_desc" translatable="false">My Location</string>
+    <string name="osrm_server_url" translatable="false">http://34.87.84.153/route/v1/foot/</string>
+    <string-array name="buildings_desc">
+        <item>Select a destination…</item>
         <item>College of Information &amp; Communication Technology</item>
         <item>College of Economics</item>
         <item>School of Law</item>
@@ -26,6 +26,46 @@
         <item>Dormitory A</item>
         <item>Dormitory B</item>
     </string-array>
+    <string-array name="buildings_name">
+        <item>Select a destination…</item>
+        <item>College of Information &amp; Communication Technology</item>
+        <item>College of Economics</item>
+        <item>School of Law</item>
+        <item>College of Agriculture &amp; Applied Biology</item>
+        <item>College of Aquaculture &amp; Fisheries</item>
+        <item>College of Engineering Technology</item>
+        <item>College of Environment &amp; Natural Resources</item>
+        <item>College of Natural Sciences</item>
+        <item>Administration Building</item>
+        <item>Learning Resource Center</item>
+        <item>School of Political Science</item>
+        <item>School of Social Sciences &amp; Humanities</item>
+        <item>School of Education</item>
+        <item>Department of Physical Education</item>
+        <item>School of Pre-University</item>
+        <item>Dormitory A</item>
+        <item>Dormitory B</item>
+    </string-array>
+    <string-array name="buildings_code" translatable="false">
+        <item>NONE</item>
+        <item>DI</item>
+        <item>KT</item>
+        <item>KL</item>
+        <item>NN</item>
+        <item>TS</item>
+        <item>CN</item>
+        <item>MTN</item>
+        <item>KH</item>
+        <item>NDH</item>
+        <item>TTHL</item>
+        <item>MT</item>
+        <item>XH</item>
+        <item>SP</item>
+        <item>TC</item>
+        <item>DB</item>
+        <item>KTXA</item>
+        <item>KTXB</item>
+    </string-array>
     <string-array name="languages">
         <item>Chọn ngôn ngữ</item>
         <item>Anh</item>
@@ -34,11 +74,11 @@
     <string name="first_draweritem">Giới thiệu</string>
     <string name="second_draweritem">Hướng dẫn</string>
     <string name="third_draweritem">Thông tin các khoa</string>
-    <string name="fourth_draweritem">Phản hồi</string>
+    <string name="drawer_item_4">Phản hồi</string>
     <string name="third_subitem1">Khoa CNTT và Truyền Thông</string>
     <string name="third_subitem2">Khoa Luật</string>
     <string name="language">Ngôn ngữ:</string>
-    <string name="Permissiondenied">Không thể tải bản đồ mà không có tất cả các quyền được cấp</string>
+    <string name="permissions_denied">Không thể tải bản đồ mà không có tất cả các quyền được cấp</string>
     <string name="Permission_GPS">Vui lòng bật GPS để có được vị trí của bạn</string>
-    <string name="third_subitem3">Khoa Kinh Tế</string>
+    <string name="sub_item_3">Khoa Kinh Tế</string>
 </resources>
