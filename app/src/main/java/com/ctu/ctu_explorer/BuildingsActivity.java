@@ -22,7 +22,7 @@ public class BuildingsActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         code = intent.getStringExtra("code");
-        Buildings buildings = new Buildings(getApplicationContext());
+        Buildings buildings = new Buildings(BuildingsActivity.this);
 
         tv = (TextView)findViewById(R.id.tv);
         tv2 = (TextView) findViewById(R.id.tv2);

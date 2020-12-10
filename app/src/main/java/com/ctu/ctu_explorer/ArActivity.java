@@ -34,8 +34,10 @@ import com.google.ar.sceneform.ux.ArFragment;
 import com.google.ar.sceneform.ux.TransformableNode;
 
 import java.lang.ref.WeakReference;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.Random;
 
 public class ArActivity extends AppCompatActivity {
     private ArFragment fragment;
@@ -80,9 +82,30 @@ public class ArActivity extends AppCompatActivity {
 
         modelLoader = new ModelLoader(new WeakReference<>(this));
 
-        tts = new TextToSpeech(this, status -> {});
-        tts.setSpeechRate((float) 0.9);
-        tts.setPitch((float) 0.5);
+        tts = new TextToSpeech(this, status -> {
+            if (status == TextToSpeech.SUCCESS) {
+                tts.setSpeechRate((float) 0.9);
+                tts.setPitch((float) 0.5);
+                tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                    @Override
+                    public void onStart(String utteranceId) {
+                        runOnUiThread(() -> subtitle.setVisibility(View.VISIBLE));
+                    }
+
+                    @Override
+                    public void onDone(String utteranceId) {
+                        runOnUiThread(() -> subtitle.setVisibility(View.INVISIBLE));
+                    }
+
+                    @Override
+                    public void onError(String utteranceId) {
+                        runOnUiThread(() -> {
+                            Toast.makeText(ArActivity.this, "Speech error!", Toast.LENGTH_SHORT).show();
+                        });
+                    }
+                });
+            }
+        });
     }
 
     private void addObject(Uri model) {
@@ -280,26 +303,8 @@ public class ArActivity extends AppCompatActivity {
     }
 
     private void startReading(String text) {
-        subtitle.setText(text);
-        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, text);
-        tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-            @Override
-            public void onStart(String utteranceId) {
-//                Toast.makeText(ArActivity.this, "Speech start!", Toast.LENGTH_SHORT).show();
-                subtitle.setVisibility(View.VISIBLE);
-            }
-
-            @Override
-            public void onDone(String utteranceId) {
-//                Toast.makeText(ArActivity.this, "Speech end!", Toast.LENGTH_SHORT).show();
-                subtitle.setVisibility(View.INVISIBLE);
-            }
-
-            @Override
-            public void onError(String utteranceId) {
-                Toast.makeText(ArActivity.this, "Speech error!", Toast.LENGTH_SHORT).show();
-            }
-        });
+        runOnUiThread(() -> subtitle.setText(text));
+        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, "");
     }
 
 }

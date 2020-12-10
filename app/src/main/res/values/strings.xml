@@ -27,13 +27,13 @@
         <item>Dormitory B</item>
     </string-array>
     <string-array name="buildings_name">
-        <item>Select a destination…</item>
+        <item>Chọn điểm đến…</item>
         <item>Khoa Công nghệ thông tin và truyền thông</item>
         <item>Khoa Kinh tế</item>
         <item>Khoa luật</item>
         <item>Khoa Nông nghiệp và sinh học ứng dụng</item>
         <item>Khoa thủy sản</item>
-        <item>Không công nghệ</item>
+        <item>Khoa công nghệ</item>
         <item>Khoa môi trường và TNTN</item>
         <item>Khoa tự nhiên</item>
         <item>Nhà điều hành</item>
