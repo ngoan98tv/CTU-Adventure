@@ -32,11 +32,13 @@ public final class Buildings {
     private List<String> names;
     private List<String> codes;
     private List<String> descriptions;
+    private List<String> descriptionsLong;
 
     public Buildings(Context context) {
         names = Arrays.asList(context.getResources().getStringArray(R.array.buildings_name));
         codes = Arrays.asList(context.getResources().getStringArray(R.array.buildings_code));
         descriptions = Arrays.asList(context.getResources().getStringArray(R.array.buildings_desc));
+        descriptionsLong = Arrays.asList(context.getResources().getStringArray(R.array.buildings_desc_long));
     }
 
     public List<String> getNames() {
@@ -57,5 +59,10 @@ public final class Buildings {
         int index = codes.indexOf(code);
         if (index < 0) return "Unknown";
         return descriptions.get(index);
+    }
+    public String getDescriptionLongByCode(String code) {
+        int index = codes.indexOf(code);
+        if (index < 0) return "Unknown";
+        return descriptionsLong.get(index);
     }
 }

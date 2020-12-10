@@ -26,6 +26,45 @@
         <item>Dormitory A</item>
         <item>Dormitory B</item>
     </string-array>
+    <string-array name="buildings_desc_long">
+        <item>Select a destination…</item>
+        <item>Sứ mệnh của Khoa là đào tạo, nghiên cứu khoa học và chuyển giao công nghệ trong lĩnh vực CNTT. Xác định công nghệ thông tin có vị thế rất quan trọng về nhu cầu nhân lực và tiềm năng phát triển, đặc biệt trong bối cảnh thế giới bước vào thời đại Cách mạng công nghiệp 4.0, Khoa luôn chú trọng đẩy mạnh các hoạt động về nguồn lực con người, đào tạo, nghiên cứu khoa học, hợp tác quốc tế và cơ sở vật chất cả về chất lượng lẫn quy mô.Tầm nhìn đến 2025, Khoa trở thành một trung tâm đào tạo và nghiên cứu khoa học đẳng cấp trong nước và khu vực Đông Nam Á về lĩnh vực CNTT&amp;TT, và đạt các tiêu chuẩn đào tạo từ các trường đại học tiên tiến trên thế giới.
+CNTT&amp;TT bao gồm 5 bộ môn và 2 đơn vị hỗ trợ:\n
+            1. Bộ môn Hệ thống Thông tin\n
+            2. Bộ môn Mạng máy tính và Truyền thông\n
+            3. Bộ môn Công nghệ phần mềm\n
+            4. Bộ môn Khoa học máy tính\n
+            5. Bộ môn Công nghệ thông tin\n
+            6. Văn phòng Khoa\n
+            7. Trung tâm Điện tử và Tin học\n
+            Đội ngũ cán bộ khoa hiện có 94 thành viên với 24 tiến sĩ (5 phó giáo sư), 51 thạc sĩ, 3.362 sinh viên đại học và 19 sinh viên sau đại học.
+            Từ khi thành lập, Trường là một trong bảy khoa CNTT chính tại Việt Nam và đã được đầu tư rất nhiều vào các chương trình và dự án như Chương trình mục tiêu quốc gia về công nghệ thông tin và Dự án nâng cao năng lực đào tạo đại học và sau đại học.
+            Trường có hợp tác mạnh mẽ với Hiệp hội các trường đại học nói tiếng Pháp (AUF) trong chương trình Công nghệ thông tin song ngữ (hướng dẫn tiếng Pháp) để đào tạo các kỹ sư CNTT có kỹ năng giao tiếp tiếng Pháp tốt. Trường đang tích cực làm việc để hợp tác với các trường đại học nước ngoài để cung cấp ít nhất một chương trình đại học nâng cao và một chương trình thạc sĩ nâng cao.\n\n
+
+            Các dự án nghiên cứu khác nhau đã được thực hiện thành công. Nỗ lực thực hiện để tăng quy mô đào tạo CNTT&amp;TT, cải thiện chất lượng của đội ngũ giáo viên, nâng cấp cơ sở vật chất và tìm thêm cơ hội hợp tác.\n\n
+
+            Thế mạnh:\n
+            Giáo dục điện tử và giáo dục từ xa\n
+            Hệ thống thông tin địa lý (GIS)\n
+            Khai thác dữ liệu và nhận dạng mẫu\n
+            Mô hình hóa và mô phỏng\n
+            Dữ liệu lớn và điện toán đám mây\n
+            Bảo mật mạng và hệ thống\n
+            Truyền thông di động\n\n
+
+            Chương trình đào tạo Đại học:\n
+            Hệ thống thông tin\n
+            Công nghệ phần mềm\n
+            Truyền thông và Mạng máy tính\n
+            Khoa học máy tính\n
+            Công nghệ thông tin\n\n
+
+            Chương trình song ngữ đặc biệt (Pháp-Việt) cho tất cả các ngành học trên.\n\n
+            Chương trình đào tạo sau Đại học:\n
+            Thạc sĩ Hệ thống thông tin\n
+            Thạc sĩ Khoa học máy tính\n
+            Tiến sĩ Hệ thống thông tin.</item>
+    </string-array>
     <string-array name="buildings_name">
         <item>Chọn điểm đến…</item>
         <item>Khoa Công nghệ thông tin và truyền thông</item>
