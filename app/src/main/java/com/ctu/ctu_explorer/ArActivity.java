@@ -81,7 +81,8 @@ public class ArActivity extends AppCompatActivity {
         modelLoader = new ModelLoader(new WeakReference<>(this));
 
         tts = new TextToSpeech(this, status -> {});
-        tts.setSpeechRate((float) 1.5);
+        tts.setSpeechRate((float) 0.9);
+        tts.setPitch((float) 0.5);
     }
 
     private void addObject(Uri model) {
@@ -284,11 +285,13 @@ public class ArActivity extends AppCompatActivity {
         tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
             @Override
             public void onStart(String utteranceId) {
+//                Toast.makeText(ArActivity.this, "Speech start!", Toast.LENGTH_SHORT).show();
                 subtitle.setVisibility(View.VISIBLE);
             }
 
             @Override
             public void onDone(String utteranceId) {
+//                Toast.makeText(ArActivity.this, "Speech end!", Toast.LENGTH_SHORT).show();
                 subtitle.setVisibility(View.INVISIBLE);
             }
 

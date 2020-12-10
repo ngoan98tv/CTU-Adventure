@@ -66,6 +66,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
+        android:visibility="gone"
         android:layout_margin="32dp"
         app:srcCompat="@android:drawable/ic_menu_camera" />
 
@@ -87,7 +88,7 @@
             android:background="#99000000"
             android:textColor="#fefefe"
             android:visibility="invisible"
-            android:text="Hello"
+            android:text="Example"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"

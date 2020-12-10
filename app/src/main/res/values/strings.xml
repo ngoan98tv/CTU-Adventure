@@ -8,43 +8,43 @@
     <string name="osrm_server_url" translatable="false">http://34.87.84.153/route/v1/foot/</string>
     <string-array name="buildings_desc">
         <item>Select a destination…</item>
-        <item>College of Information &amp; Communication Technology</item>
-        <item>College of Economics</item>
-        <item>School of Law</item>
-        <item>College of Agriculture &amp; Applied Biology</item>
-        <item>College of Aquaculture &amp; Fisheries</item>
-        <item>College of Engineering Technology</item>
-        <item>College of Environment &amp; Natural Resources</item>
-        <item>College of Natural Sciences</item>
-        <item>Administration Building</item>
-        <item>Learning Resource Center</item>
-        <item>School of Political Science</item>
-        <item>School of Social Sciences &amp; Humanities</item>
-        <item>School of Education</item>
-        <item>Department of Physical Education</item>
-        <item>School of Pre-University</item>
+        <item>College of Information &amp; Communication Technology: Khoa Công nghệ Thông tin và Truyền thông (CICT) được thành lập vào năm 1994, trước là Trung tâm Tin học và Điện tử (1990). Tổng số cán bộ, giáo viên là 94 người với 24 tiến sĩ (5 phó giáo sư), 51 thạc sĩ.</item>
+        <item>College of Economics: Ngày 12 tháng 10 năm 1979 Trường Đại học Cần Thơ ra Quyết định số 451/TCCB thành lập Khoa Kinh tế và tuyển sinh đầu tiên ngành Kinh tế nông nghiệp khóa 5 sau năm 1975. Khoa đã không ngừng tăng trưởng về quy mô và cải thiện chất lượng của các hoạt động đào tạo để đáp ứng nhu cầu về nguồn nhân lực và nghiên cứu. Nó cũng cung cấp các dịch vụ tư vấn để phát triển giáo dục, kinh tế và xã hội ở đồng bằng sông Cửu Long.</item>
+        <item>School of Law: Khoa Luật được thành lập vào tháng 2 năm 2000 trên cơ sở phát triển từ Bộ môn Luật được thành lập vào tháng 9 năm 1998. Khoa Luật giữ vai trò đào tạo nguồn nhân lực trình độ Cử nhân Luật cho vùng đồng bằng Sông Cửu Long. Khoa đào tạo chuyên môn pháp luật trình độ Đại học, Cao học. Bên cạnh đó, Khoa cũng thực hiện hình thức đào tạo, bồi dưỡng nâng cao trình độ cho cán bộ, công chức đương nhiệm một số tỉnh. Năm 2011, Khoa đã khởi xướng một chương trình sau đại học về Thạc sĩ Luật Kinh doanh.</item>
+        <item>College of Agriculture &amp; Applied Biology: Cơ sở tiền thân của Khoa Nông nghiệp và Sinh học ứng dụng ngày nay là Trường Cao đẳng Nông nghiệp, được thành lập vào năm 1968, thuộc Viện Đại học Cần Thơ. Sau năm 1975, Trường Cao đẳng Nông nghiệp được đổi tên thành Khoa Nông nghiệp, đào tạo hai ngành Trồng trọt và Chăn nuôi. Những năm sau đó, để đáp ứng thực tiễn sản xuất ngày càng đa dạng của vùng Đồng bằng sông Cửu Long và Nam bộ, Khoa Nông nghiệp đảm nhận đào tạo thêm các ngành mới gồm Thủy nông và cải tạo đất (1978), Cơ khí nông nghiệp (1978), Chế biến và bảo quản nông sản (1978), Kinh tế nông nghiệp (1979) và Thủy sản (1979). Sau đó, những khoa chuyên môn được thành lập để quản lý những ngành học này. Năm 1996, cùng với việc sắp xếp lại mạng lưới đại học trong cả nước, Khoa Nông nghiệp được xác lập trở lại trên cơ sở sát nhập các Khoa Trồng trọt, Chăn nuôi – Thú y, Thủy sản và Chế biến. </item>
+        <item>College of Aquaculture &amp; Fisheries: Khoa Thủy sản, Trường Đại học Cần Thơ được thành lập năm 1979 trên cơ sở Bộ môn Thủy sản. Trong quá trình phát triển của nhà Trường cơ cấu tổ chức có sự thay đổi để phù hợp chức năng nhiệm vụ cũng như định hướng phát triển, vì thế Khoa Thủy sản cũng có những thay đổi theo. Năm 1996 thì Khoa Thuỷ sản cùng với các Khoa Trồng trọt, Khoa Chăn nuôi và Thú Y và Khoa Chế biến được hợp nhất thành Khoa Nông nghiệp.</item>
+        <item>College of Engineering Technology: Là một trong những khoa lớn của trường Đại học Cần Thơ, Khoa Công nghệ chịu trách nhiệm đào tạo các ngành kỹ thuật công nghệ, hợp tác quốc tế, nghiên cứu và chuyển giao công nghệ cho vùng Đồng bằng sông Cửu Long và cả nước.</item>
+        <item>College of Environment &amp; Natural Resources:  Khoa Môi trường và Tài nguyên thiên nhiên được thành lập vào ngày 21 tháng 01 năm 2008 theo Quyết định số 81/QĐ-ĐHCT, trên cơ sở Bộ môn Kỹ thuật môi trường và Tài nguyên nước (Khoa Công nghệ) và Bộ môn Môi trường và Tài nguyên Thiên nhiên (Khoa Nông nghiệp và Sinh học Ứng dụng). Là một trong những tổ chức giáo dục và nghiên cứu tại Đại học Cần Thơ.</item>
+        <item>College of Natural Sciences: Khoa  Khoa học Tự nhiên (CNS) là một trong những Khoa của Đại học Cần Thơ (CTU), một trung tâm Đại học đồng bằng sông Cửu Long với các chương trình đào tạo đa chuyên ngành. CNS đang thực hiện sứ mệnh giảng dạy các chương trình cử nhân và thạc sĩ, thực hiện nghiên cứu và chuyển giao công nghệ mới.</item>
+        <item>Administration Building: Tòa nhà điều hành Đại học Cần Thơ bao gồm các phòng ban: phòng công tác chính trị, phòng công tác sinh viên, phòng đào tạo, phòng hợp tác quốc tế, phòng kế hoạch tổng hợp, phòng quản lý khoa học, phòng quản trị thiết bị, phòng tài chính, phòng thanh tra pháp chế, phòng tổ chức cán bộ, trung tâm liên kết đào tạo, trung tâm quản lý chất lượng, trung tâm thông tin và quản trị mạng.</item>
+        <item>Learning Resource Center: Trung tâm Học liệu - Đại học Cần Thơ, tiền thân là Thư viện Trung tâm Đại học Cần Thơ được Tổ chức từ thiện Atlantic Philanthropies ( Mỹ ) tài trợ xây dựng mới trên cơ sở chuyển khoảng 70% vốn tài liệu và toàn bộ cán bộ của Thư viện Trung tâm sang Trung tâm Học liệu. Trung tâm Học liệu được tọa lạc ngay lối vào cổng A của khu II, Đại học Cần Thơ, một địa điểm lý tưởng thuận tiện cho khách hàng và sinh viên đến sử dụng Trung tâm Học liệu phục vụ cho việc học tập và nghiên cứu. Trung tâm Học liệu được xây dựng 4 tầng, được thiết kế xây dựng và sắp xếp mỗi tầng của tòa nhà rất hấp dẫn và khoa học phù hợp cho từng góc học tập, nghiên cứu, làm việc độc lập và theo nhóm.</item>
+        <item>School of Political Science: Đơn vị tiền thân của Khoa Khoa học Chính trị là Ban Mác – Lênin, được thành lập vào tháng 10 năm 1975. Đến năm 1978, theo quyết định của Bộ Giáo dục - Đào tạo và Trường Đại học Cần Thơ, Ban Mác-Lênin phát triển thành Khoa Mác-Lênin, gồm có 04 bộ môn: Triết học Mác-Lênin, Kinh tế chính trị học Mác-Lênin, Chủ nghĩa xã hội khoa học và Lịch sử Đảng Cộng sản Việt Nam. Vào năm 1987, Khoa Mác-Lênin được đổi tên thành Bộ môn Mác-Lênin. Tháng 3/2003, Bộ Giáo dục và Đào tạo quyết định thành lập Khoa Mác-Lênin, Tư Tưởng Hồ Chí Minh trực thuộc Trường Đại học Cần Thơ trên cơ sở Bộ môn Mác-Lênin. Tháng 10/2008 đến nay, Khoa Mác-Lênin, Tư Tưởng Hồ Chí Minh được đổi tên thành Khoa Khoa học Chính trị.</item>
+        <item>School of Social Sciences &amp; Humanities: Khoa Khoa học Xã hội và Nhân văn được thành lập tháng 9 năm 2009 trên cơ sở tách ra từ Khoa Sư phạm và Trung tâm Học liệu. Khoa có nhiệm vụ đào tạo và nghiên cứu về lĩnh vực khoa học xã hội và nhân văn phục vụ cho sự phát triển vùng Đồng bằng sông Cửu Long và cả nước. Từ tháng 4 năm 2015 bộ môn Anh văn và Pháp văn tách qua khoa Ngoại ngữ. Khoa Khoa học Xã hội và Nhân văn còn lại 4 bộ môn: Ngữ văn, Lịch sử - Địa lý – Du lịch, Thông tin Thư viện, Xã hội học. 4 chuyên ngành đào tạo Đại học: Việt Nam học(Hướng dẫn viên du lịch), Văn học, Thông tin học, Xã hội học và 1 ngành Cao học: Văn học Việt Nam. Trong thời gian tới khoa dự định sẽ mở thêm ngành Báo chí và Văn hóa học.</item>
+        <item>School of Education: Khoa Sư phạm là một trong 4 đơn vị đầu tiên của Viện Đại học Cần Thơ (nay là Trường Đại học Cần Thơ), được thành lập vào ngày 31 tháng 3 năm 1966. Sau năm 1975, Khoa Sư phạm được tách thành Khoa Sư phạm Tự nhiên và Khoa Sư phạm Xã hội với nhiệm vụ là đào tạo giáo viên trung học phổ thông. Sau đó, hai Khoa này lại tiếp tục tách thành 5 Khoa: Toán - Lí (1980), Hóa - Sinh (1980), Sử - Địa (1982), Ngữ Văn (1983) và Ngoại ngữ (1983). Tròn 30 năm sau, năm 1996, Khoa Sư phạm được tái thành lập trên cơ sở các Khoa trên.</item>
+        <item>Department of Physical Education: Khoa Giáo dục thể chất của Đại học Cần Thơ, giảng dạy môn thể dục thể thao cho sinh viên chuyên ngành giáo dục thể chất và chuyên ngành, thực hiện các hoạt động nghiên cứu khoa học và tổ chức các hoạt động, phong trào thể thao để phát triển giáo dục và đào tạo và rèn luyện thể chất cho khu vực đồng bằng sông Cửu Long.</item>
+        <item>School of Pre-University: Khoa Dự bị Dân tộc được thành lập ngày 26 tháng 10 năm 2007 nhằm đáp ứng nhu cầu đào tạo, phát triển đội ngũ cán bộ Khoa học kỹ thuật người dân tộc, vùng sâu, vùng xa, vùng biên giới và hải đảo cho các tỉnh thuộc khu vực ĐBSCL.</item>
         <item>Dormitory A</item>
         <item>Dormitory B</item>
     </string-array>
     <string-array name="buildings_name">
         <item>Select a destination…</item>
-        <item>College of Information &amp; Communication Technology</item>
-        <item>College of Economics</item>
-        <item>School of Law</item>
-        <item>College of Agriculture &amp; Applied Biology</item>
-        <item>College of Aquaculture &amp; Fisheries</item>
-        <item>College of Engineering Technology</item>
-        <item>College of Environment &amp; Natural Resources</item>
-        <item>College of Natural Sciences</item>
-        <item>Administration Building</item>
-        <item>Learning Resource Center</item>
-        <item>School of Political Science</item>
-        <item>School of Social Sciences &amp; Humanities</item>
-        <item>School of Education</item>
-        <item>Department of Physical Education</item>
-        <item>School of Pre-University</item>
-        <item>Dormitory A</item>
-        <item>Dormitory B</item>
+        <item>Khoa Công nghệ thông tin và truyền thông</item>
+        <item>Khoa Kinh tế</item>
+        <item>Khoa luật</item>
+        <item>Khoa Nông nghiệp và sinh học ứng dụng</item>
+        <item>Khoa thủy sản</item>
+        <item>Không công nghệ</item>
+        <item>Khoa môi trường và TNTN</item>
+        <item>Khoa tự nhiên</item>
+        <item>Nhà điều hành</item>
+        <item>Trung tâm học liệu</item>
+        <item>Khoa chính trị</item>
+        <item>Khoa KHXH và Nhân văn</item>
+        <item>Khoa sư phạm</item>
+        <item>Bộ môn GDTC</item>
+        <item>Khoa dự bị dân tộc</item>
+        <item>KTX A</item>
+        <item>KTX B</item>
     </string-array>
     <string-array name="buildings_code" translatable="false">
         <item>NONE</item>

@@ -22,12 +22,14 @@ public class BuildingsActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         code = intent.getStringExtra("code");
+        Buildings buildings = new Buildings(getApplicationContext());
 
         tv = (TextView)findViewById(R.id.tv);
         tv2 = (TextView) findViewById(R.id.tv2);
         sv = (ScrollView)findViewById(R.id.sv);
         iv = (ImageView)findViewById(R.id.iv);
 
-        tv.setText(code);
+        tv.setText(buildings.getNameByCode(code));
+        tv2.setText(buildings.getDescriptionByCode(code));
     }
 }
