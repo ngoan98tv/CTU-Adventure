@@ -6,10 +6,12 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.os.HandlerThread;
+import android.os.Message;
 import android.service.voice.VoiceInteractionService;
 import android.speech.tts.TextToSpeech;
 import android.speech.tts.UtteranceProgressListener;
 import android.speech.tts.Voice;
+import android.text.method.ScrollingMovementMethod;
 import android.view.PixelCopy;
 import android.view.View;
 import android.widget.ImageButton;
@@ -56,6 +58,15 @@ public class ArActivity extends AppCompatActivity {
     private TextView subtitle;
     private TextToSpeech tts;
 
+    Handler timerHandler = new Handler();
+    Runnable timerRunnable = new Runnable() {
+        @Override
+        public void run() {
+            subtitle.scrollBy(0,46);
+            timerHandler.postDelayed(this, 4600);
+        }
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,6 +84,9 @@ public class ArActivity extends AppCompatActivity {
         subtitle = findViewById(R.id.ar_subtitle);
         buildings = new Buildings(this);
 
+        subtitle.setMovementMethod(new ScrollingMovementMethod());
+        subtitle.post(() -> subtitle.setSelected(true));
+
         fragment = (ArFragment) getSupportFragmentManager().findFragmentById(R.id.sceneform_fragment);
         assert fragment != null;
         fragment.getArSceneView().getScene().addOnUpdateListener(frameTime -> {
@@ -89,12 +103,18 @@ public class ArActivity extends AppCompatActivity {
                 tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
                     @Override
                     public void onStart(String utteranceId) {
-                        runOnUiThread(() -> subtitle.setVisibility(View.VISIBLE));
+                        runOnUiThread(() -> {
+                            subtitle.setVisibility(View.VISIBLE);
+                            timerHandler.postDelayed(timerRunnable, 4600);
+                        });
                     }
 
                     @Override
                     public void onDone(String utteranceId) {
-                        runOnUiThread(() -> subtitle.setVisibility(View.INVISIBLE));
+                        runOnUiThread(() -> {
+                            subtitle.setVisibility(View.INVISIBLE);
+                            timerHandler.removeCallbacks(timerRunnable);
+                        });
                     }
 
                     @Override
@@ -303,7 +323,9 @@ public class ArActivity extends AppCompatActivity {
     }
 
     private void startReading(String text) {
-        runOnUiThread(() -> subtitle.setText(text));
+        runOnUiThread(() -> {
+            subtitle.setText(text);
+        });
         tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, "");
     }
 
