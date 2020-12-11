@@ -5,7 +5,7 @@
     <string name="message_default_text" translatable="false">Well!</string>
     <string name="capture_btn_desc" translatable="false">Capture</string>
     <string name="my_location_btn_desc" translatable="false">My Location</string>
-    <string name="osrm_server_url" translatable="false">http://34.87.84.153/route/v1/foot/</string>
+    <string name="osrm_server_url" translatable="false">http://192.168.1.111:5000/route/v1/foot/</string>
     <string-array name="buildings_desc">
         <item>Select a destination…</item>
         <item>College of Information &amp; Communication Technology: Khoa Công nghệ Thông tin và Truyền thông (CICT) được thành lập vào năm 1994, trước là Trung tâm Tin học và Điện tử (1990). Tổng số cán bộ, giáo viên là 94 người với 24 tiến sĩ (5 phó giáo sư), 51 thạc sĩ.</item>
