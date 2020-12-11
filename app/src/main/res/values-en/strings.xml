@@ -35,6 +35,47 @@
         <item>Dormitory A</item>
         <item>Dormitory B</item>
     </string-array>
+    <string-array name="buildings_desc_long">
+        <item>Select a destination…</item>
+        <item>Vision\n
+CICT’s main missions are to offer undergraduate and postgraduate programs, and to participate in scientific research and technology transfer in the field of Information and Communication Technology (ICT).
+CICT’s vision towards 2020 is to become a well-known ICT research and education institution in Vietnam, which plays a core role in ICT research, education and technology transfer in the Mekong Delta and the Southern Region, and reaches the training standards from the advanced universities in the world.\n\n
+Courses\n
+            CICT consists of 5 academic departments and 2 supporting units:\n
+1. Department of Information Systems\n
+2. Department of Computer Network and Communications\n
+3. Department of Software Engineering\n
+4. Department of Computer Science\n
+5. Department of Information Technology\n
+6. Administration Office\n
+7. Electronics-Informatics Center\n\n
+
+From its inception, the College was one of the seven key ICT faculties in Vietnam and has been hugely invested in programs and projects such as the National Target Program on Information Technology, and the Capacity Building Project in Undergraduate and Postgraduate training.
+The College has a strong collaboration with the Association of French-speaking Universities (AUF) in the Bilingual Information Technology program (French instruction) to train IT being-engineers with good French communication skills. The College is actively working towards co-operating with foreign universities toofer at least one advanced undergraduate program and one advanced master program.
+The College conducts effective scientific research and education cooperation with multiple partners such as the University of Nantes, the University of La Rochelle (France), the French Institute for Research &amp; Development (IRD), the French Institute of Informatics (IFI, Hanoi), the University of Kemi-Tornio (Finland), etc.
+Various research projects have been successfully executed. Efforts are made to increase CICT’s training scale, to improve the quality of its academic staff, to upgrade the facilities, and to search for more collaboration opportunities.\n\n
+College strengths:\n
+E-learning and distance education\n
+Geographic Information Systems (GIS)\n
+Data mining and pattern recognition\n
+Modeling and simulation\n
+Big data and cloud computing\n
+Network and system security\n
+Mobile communications\n\n
+
+Undergraduate programs:\n
+Information Systems\n
+Software Engineering\n
+Communications and Computer Networks\n
+Computer Science\n
+Information Technology\n\n
+Special bilingual program (French-Vietnamese) for all of the above disciplines.\n\n
+Postgraduate programs:\n
+Master of Information Systems\n
+Master of Computer Science\n
+Ph.D of Information Systems.</item>
+
+    </string-array>
     <string-array name="buildings_name">
         <item>Select a destination…</item>
         <item>College of Information &amp; Communication Technology</item>
