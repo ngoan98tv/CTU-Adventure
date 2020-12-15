@@ -18,7 +18,7 @@
     <TextView
         android:id="@+id/tv"
         android:layout_width="match_parent"
-        android:layout_height="83dp"
+        android:layout_height="wrap_content"
         android:text="College of Information and Communication Technology"
         android:textAlignment="center"
         android:textColor="#050505"
