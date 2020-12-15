@@ -355,6 +355,26 @@ National Preparatory Department has the following training systems:\n\n
 
 
     </string-array>
+    <integer-array name="imgs">
+
+        <item>0</item>
+        <item>@drawable/cit</item>
+        <item>@drawable/c_eco</item>
+        <item>@drawable/c_law</item>
+        <item>@drawable/c_bio</item>
+        <item>@drawable/c_fish</item>
+        <item>@drawable/c_engi</item>
+        <item>@drawable/c_env</item>
+        <item>@drawable/c_natu</item>
+        <item>@drawable/admin</item>
+        <item>@drawable/learn_center</item>
+        <item>@drawable/c_pol</item>
+        <item>@drawable/c_soci</item>
+        <item>@drawable/c_school</item>
+        <item>@drawable/physical</item>
+        <item>@drawable/c_preuni</item>
+
+    </integer-array>
     <string-array name="buildings_name">
         <item>Select a destination…</item>
         <item>College of Information &amp; Communication Technology</item>

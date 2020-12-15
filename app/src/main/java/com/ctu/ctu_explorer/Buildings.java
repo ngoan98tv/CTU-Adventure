@@ -1,6 +1,7 @@
 package com.ctu.ctu_explorer;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 
 import org.osmdroid.util.GeoPoint;
 
@@ -30,12 +31,15 @@ public final class Buildings {
     };
 
     private List<String> names;
+    private TypedArray pics;
     private List<String> codes;
     private List<String> descriptions;
     private List<String> descriptionsLong;
 
     public Buildings(Context context) {
         names = Arrays.asList(context.getResources().getStringArray(R.array.buildings_name));
+
+        pics = context.getResources().obtainTypedArray(R.array.imgs);
         codes = Arrays.asList(context.getResources().getStringArray(R.array.buildings_code));
         descriptions = Arrays.asList(context.getResources().getStringArray(R.array.buildings_desc));
         descriptionsLong = Arrays.asList(context.getResources().getStringArray(R.array.buildings_desc_long));
@@ -64,5 +68,10 @@ public final class Buildings {
         int index = codes.indexOf(code);
         if (index < 0) return "Unknown";
         return descriptionsLong.get(index);
+    }
+    public int getPicsByCode(String code) {
+        int index = codes.indexOf(code);
+        if (index < 0) return 0;
+        return pics.getResourceId(index,0);
     }
 }

@@ -3,6 +3,7 @@ package com.ctu.ctu_explorer;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.view.Window;
 import android.widget.ImageView;
@@ -20,6 +21,7 @@ public class BuildingsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buildings);
 
+        TypedArray pics = getResources().obtainTypedArray(R.array.imgs);
         Intent intent = getIntent();
         code = intent.getStringExtra("code");
         Buildings buildings = new Buildings(BuildingsActivity.this);
@@ -33,5 +35,6 @@ public class BuildingsActivity extends AppCompatActivity {
         tv.setText(buildings.getNameByCode(code));
         tv2.setText(buildings.getDescriptionByCode(code));
         tv3.setText(buildings.getDescriptionLongByCode(code));
+        iv.setImageResource(buildings.getPicsByCode(code));
     }
 }

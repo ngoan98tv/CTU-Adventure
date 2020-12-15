@@ -432,6 +432,26 @@ Hiện nay Khoa Dự bị Dân tộc có 14 cán bộ; hàng năm Khoa mời gi�
         <item>KTX A</item>
         <item>KTX B</item>
     </string-array>
+    <integer-array name="imgs">
+        <item>0</item>
+        <item>@drawable/cit</item>
+        <item>@drawable/c_eco</item>
+        <item>@drawable/c_law</item>
+        <item>@drawable/c_bio</item>
+        <item>@drawable/c_fish</item>
+        <item>@drawable/c_engi</item>
+        <item>@drawable/c_env</item>
+        <item>@drawable/c_natu</item>
+        <item>@drawable/admin</item>
+        <item>@drawable/learn_center</item>
+        <item>@drawable/c_pol</item>
+        <item>@drawable/c_soci</item>
+        <item>@drawable/c_school</item>
+        <item>@drawable/physical</item>
+        <item>@drawable/c_preuni</item>
+
+
+    </integer-array>
     <string-array name="buildings_code" translatable="false">
         <item>NONE</item>
         <item>DI</item>
